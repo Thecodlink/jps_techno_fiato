@@ -16,6 +16,18 @@ const backgroundThemes = {
     pixelpetra: 'var(--bg-theme-1)',
     registration: 'var(--bg-theme-1)'
 };
+const light = document.getElementById("light");
+
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+
+  light.style.background = `radial-gradient(
+    circle at ${x}px ${y}px,
+    rgba(0, 255, 255, 0.15),
+    transparent 60%
+  )`;
+});
 
 // Event titles for sticky header
 const eventTitles = {
