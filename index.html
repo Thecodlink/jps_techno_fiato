@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNOFIATO - BUILD TO COMPETE, PROGRAMMED TO WIN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/postprocessing@6.33.4/build/postprocessing.min.js"></script>
+    <!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</head>
+<script>
+    // Initialize Particles.js
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80
+        },
+        "color": {
+          "value": "#00fff7"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "size": {
+          "value": 3
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  
+    // Initialize Typed.js
+    var typed = new Typed("#typed-text", {
+      strings: [
+        "Build to Compete...",
+        "Programmed to Win."
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      backDelay: 1500,
+      loop: true
+    });
+  </script>
+  
+<body>
+    <!-- Background Layers -->
+    <div class="background-container">
+        <div class="bg-layer bg-layer-1"></div>
+        <div class="bg-layer bg-layer-2"></div>
+        <div class="bg-layer bg-layer-3"></div>
+        <div class="particles" id="particles-js"></div>
+    </div>
+<!-- Hero Section with Particles Background -->
+<
+  
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-image-wrapper">
+                    <img src="/Users/shivansh/Documents/techno fiato/logo.png" alt="Technofiato Logo" class="logo-img" />
+                </div>
+                <span class="logo-text">TECHNOFIATO</span>
+            </div>
+            <div class="current-event">
+                
+                <span class="event-title">Welcome to TECHNOFIATO</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#registration" class="nav-link">Register</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+   <!-- Main Scroll Container -->
+<main class="scroll-container">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section minimal-hero" data-event="hero">
+      
+      <!-- Background Effect -->
+      <div class="hero-bg-glow"></div>
+      
+      <!-- Content -->
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span>TECHNO</span><span>FIATO</span>
+        </h1>
+        <p class="hero-tagline">
+            <span id="typed-text"></span>
+            
+          </p>
+          
+        
+       
+  
+      
+    </section>
+  </main>
+  
+
+       
+        
+        <!-- About TECHNOFIATO Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2 class="about-title">About TECHNOFIATO</h2>
+                    <div class="about-quote">
+                        <p>Innovation is the ability to see change as an opportunity – not a threat" - Steve Jobs</p>
+                    </div>
+                    <div class="about-description">
+                        <p>In a world driven by code and crafted by gears, welcome to the future—Welcome to Techno Fiato, a celebration of human ingenuity and machine genius where the most daring minds of today create the future, gears dance to logic, and circuits come to life.</p>
+                        <p>TechnoFiato, which was created by combining the words "Technology" and "Fiato" (which means breath and rhythm), is more than just a single event. Robots, code, and the people who created them are all part of this innovative heartbeat.</p>
+                        <p>The ultimate fusion of robotics and technology, TechnoFiato is designed to encourage, test, and unleash the upcoming generation of makers, innovators, coders, and problem-solvers.</p>
+                    </div>
+                    <div class="scroll-reveal-block">
+                        <h3>Get in Touch</h3>
+                        <p>Have questions about TECHNOFIATO? Reach out to our team for more information.</p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="11" data-suffix="">0</div>
+                        <div class="stat-label">Events</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="2" data-suffix="">0</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="20" data-suffix="+">0</div>
+                        <div class="stat-label">Teams</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="10" data-suffix="">0</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events & Competitions Section -->
+        <section id="events" class="events-section">
+            <div class="events-container">
+                <h2 class="section-title">Events & Competitions</h2>
+                
+                <!-- MachineFiato - Robotics Events -->
+                <div class="event-category">
+                    <h3 class="category-title">MachineFiato - Robotics Events</h3>
+                    <div class="circular-gallery-container" id="robotics-gallery">
+                        <!-- CircularGallery will be initialized here -->
+                    </div>
+                </div>
+
+                <!-- Techélon - Technology Events -->
+                <div class="event-category">
+                    <h3 class="category-title">Techélon - Technology Events</h3>
+                    <div class="circular-gallery-container" id="tech-gallery">
+                        <!-- CircularGallery will be initialized here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Schedule Section -->
+        <section id="schedule" class="schedule-section">
+            <div class="schedule-container">
+                <h2 class="section-title">Event Schedule</h2>
+                <div class="schedule-timeline">
+                    <div class="timeline-item" data-time="9:00 AM">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="time-slot">9:00 AM</div>
+                            <h3 class="event-name">Opening Ceremony</h3>
+                            <p class="event-description">Welcome to TECHNOFIATO</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-time="10:00 AM">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="time-slot">10:00 AM</div>
+                            <h3 class="event-name">MachineFiato Events</h3>
+                            <p class="event-description">Robotics competitions begin</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-time="11:30 AM">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="time-slot">11:30 AM</div>
+                            <h3 class="event-name">Techélon Events</h3>
+                            <p class="event-description">Technology challenges start</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-time="1:00 PM">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="time-slot">1:00 PM</div>
+                            <h3 class="event-name">Lunch Break</h3>
+                            <p class="event-description">Networking and refreshments</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-time="2:30 PM">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="time-slot">2:30 PM</div>
+                            <h3 class="event-name">Final Rounds</h3>
+                            <p class="event-description">Championship matches</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-time="5:00 PM">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="time-slot">5:00 PM</div>
+                            <h3 class="event-name">Closing Ceremony</h3>
+                            <p class="event-description">Awards and recognition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="registration" class="registration-section">
+            <div class="registration-container">
+                <div class="registration-header">
+                    <h2 class="section-title">Register Now</h2>
+                    <h3 class="registration-subtitle">Join the Competition</h3>
+                    <p class="registration-description">Ready to showcase your skills? Register your team for TECHNOFIATO and compete with the best minds in robotics and technology.</p>
+                    <div class="scroll-reveal-block">
+                        <h3>Get in Touch</h3>
+                        <p>Have questions about TECHNOFIATO? Reach out to our team for more information.</p>
+                    </div>
+                </div>
+                
+                <div class="registration-content">
+                    <div class="registration-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4>11 Events</h4>
+                            <p>Compete in robotics and technology challenges</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>20+ Teams</h4>
+                            <p>Join the best minds from top schools</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h4>Creativity</h4>
+                            <p>Explore the boundaries of creation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="registration-form-container">
+                        <form class="registration-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="team-name" name="teamName" required>
+                                    <label for="team-name">Team Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="school" name="school" required>
+                                    <label for="school">School Name</label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" required>
+                                    <label for="email">Email Address</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="phone" name="phone" required>
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select id="events" name="events" required>
+                                    <option value="">Select Events</option>
+                                    <option value="roborush">R³: RoboRush</option>
+                                    <option value="gob">G.O.B: Game of Bots</option>
+                                    <option value="ballista">BALLISTA: RoboSoccer</option>
+                                    <option value="labyrinx">Labyrinx: Bot Maze</option>
+                                    <option value="luxlinea">LuxLinea: Path Bot Race</option>
+                                    <option value="technova">TechNova: Innovation Challenge</option>
+                                    <option value="modelus">Modelus Virtuo</option>
+                                    <option value="cineframe">Cine Frame</option>
+                                    <option value="assembyte">Assembyte</option>
+                                    <option value="pixelpetra">Pixel Petra</option>
+                                </select>
+                                <label for="events">Select Events</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Registration</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Event Modals -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"></div>
+                <h2 class="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="event-overview"></div>
+                <div class="event-rules"></div>
+                <div class="event-specs"></div>
+                <div class="event-judging"></div>
+            </div>
+        </div>
+    </div>
+ <!-- Contact Us Section -->
+ <section id="contact" class="contact-section">
+    <div class="contact-container scroll-reveal-block">
+        <h2 class="contact-title">Contact Us</h2>
+        <p class="contact-subtitle">Get in Touch</p>
+        <p class="contact-description">Have questions about TECHNOFIATO? Reach out to our team for more information.</p>
+        <div class="contact-details">
+            <div class="contact-item">
+                <strong>Venue</strong><br>
+                Jagran Public School, Lucknow
+            </div>
+            <div class="contact-item">
+                <strong>Email</strong><br>
+                <a href="mailto:technofiato@jpslucknow.com">technofiato@jpslucknow.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>Phone</strong><br>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+        </div>
+        <div class="core-team">
+            <h3>Core Team</h3>
+            <ul>
+                <li>Shivansh Mishra – Event Director (House Captain)</li>
+                <li>Atharv Dwivedi – Event Director (Cultural Head)</li>
+                <li>Ojasvi Kam – Operations & Logistics</li>
+                <li>Pratyush Singh – Event Head Robotics</li>
+                <li>Aaditya Saxena – Event Head Tech</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Contact Us Section -->
+    <!-- Contact Footer -->
+    <footer class="contact-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TECHNOFIATO</h3>
+                <p>BUILD TO COMPETE, PROGRAMMED TO WIN</p>
+                <p>Presented by Jagran Public School, Lucknow</p>
+            </div>
+            <div class="footer-section">
+                <h4>Core Team</h4>
+                <ul>
+                    <li>Shivansh Mishra - Event Director</li>
+                    <li>Atharv Dwivedi - Event Director</li>
+                    <li>Ojasvi Kam - Operations & Logistics</li>
+                    <li>Pratyush Singh - Event Head Robotics</li>
+                    <li>Aaditya Saxena - Event Head Tech</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: technofiato@jpslucknow.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Venue: Jagran Public School, Lucknow</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/ogl@0.0.78/dist/ogl.min.js"></script>
+    <script src="script.js"></script>
+    <script src="hyperspeed.js"></script>
+    <script src="circular-gallery.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        const texts = [
+          "Build to Compete...",
+          "Programmed to Win.",
+          "Code the Future."
+        ];
+      
+        const typedTextSpan = document.getElementById("typed-text");
+        const cursorSpan = document.getElementById("cursor");
+      
+        let textIndex = 0;
+        let charIndex = 0;
+        const typingDelay = 100;
+        const erasingDelay = 50;
+        const newTextDelay = 1000; // pause before erasing
+        let isErasing = false;
+      
+        function type() {
+          if (!isErasing && charIndex < texts[textIndex].length) {
+            typedTextSpan.textContent += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+          } else if (!isErasing) {
+            isErasing = true;
+            setTimeout(type, newTextDelay);
+          } else if (isErasing && charIndex > 0) {
+            typedTextSpan.textContent = texts[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(type, erasingDelay);
+          } else {
+            isErasing = false;
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(type, typingDelay);
+          }
+        }
+      
+        document.addEventListener("DOMContentLoaded", () => {
+          if (texts.length) setTimeout(type, 500);
+        });
+      </script>
+      
+</body>
+</html> 

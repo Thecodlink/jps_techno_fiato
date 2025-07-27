@@ -1,0 +1,98 @@
+// CircularGallery Component - Vanilla JavaScript Version
+// Using OGL library for 3D effects
+
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+function lerp(p1, p2, t) {
+    return p1 + (p2 - p1) * t;
+}
+
+function autoBind(instance) {
+    const proto = Object.getPrototypeOf(instance);
+    Object.getOwnPropertyNames(proto).forEach((key) => {
+        if (key !== "constructor" && typeof instance[key] === "function") {
+            instance[key] = instance[key].bind(instance);
+        }
+    });
+}
+
+function createTextTexture(gl, text, font = "bold 30px monospace", color = "black") {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    context.font = font;
+    const metrics = context.measureText(text);
+    const textWidth = Math.ceil(metrics.width);
+    const textHeight = Math.ceil(parseInt(font, 10) * 1.2);
+    canvas.width = textWidth + 20;
+    canvas.height = textHeight + 20;
+    context.font = font;
+    context.fillStyle = color;
+    context.textBaseline = "middle";
+    context.textAlign = "center";
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillText(text, canvas.width / 2, canvas.height / 2);
+    const texture = new OGL.Texture(gl, { generateMipmaps: false });
+    texture.image = canvas;
+    return { texture, width: canvas.width, height: canvas.height };
+}
+
+// Initialize CircularGallery instances
+function initCircularGalleries() {
+    // Robotics Events Gallery
+    const roboticsContainer = document.getElementById('robotics-gallery');
+    if (roboticsContainer) {
+        const roboticsItems = [
+            { image: 'https://picsum.photos/seed/robot1/800/600?grayscale', text: "R³: RoboRush" },
+            { image: 'https://picsum.photos/seed/robot2/800/600?grayscale', text: "G.O.B: Game of Bots" },
+            { image: 'https://picsum.photos/seed/robot3/800/600?grayscale', text: "BALLISTA: RoboSoccer" },
+            { image: 'https://picsum.photos/seed/robot4/800/600?grayscale', text: "Labyrinx: Bot Maze" },
+            { image: 'https://picsum.photos/seed/robot5/800/600?grayscale', text: "LuxLinea: Path Bot Race" },
+            { image: 'https://picsum.photos/seed/robot6/800/600?grayscale', text: "TechNova: Innovation Challenge" }
+        ];
+        
+        // Simple gallery for now - will enhance later
+        roboticsContainer.innerHTML = `
+            <div class="gallery-items">
+                ${roboticsItems.map(item => `
+                    <div class="gallery-item">
+                        <img src="${item.image}" alt="${item.text}">
+                        <h3>${item.text}</h3>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    // Technology Events Gallery
+    const techContainer = document.getElementById('tech-gallery');
+    if (techContainer) {
+        const techItems = [
+            { image: 'https://picsum.photos/seed/tech1/800/600?grayscale', text: "Modelus Virtuo" },
+            { image: 'https://picsum.photos/seed/tech2/800/600?grayscale', text: "Cine Frame" },
+            { image: 'https://picsum.photos/seed/tech3/800/600?grayscale', text: "Assembyte" },
+            { image: 'https://picsum.photos/seed/tech4/800/600?grayscale', text: "Pixel Petra" }
+        ];
+        
+        techContainer.innerHTML = `
+            <div class="gallery-items">
+                ${techItems.map(item => `
+                    <div class="gallery-item">
+                        <img src="${item.image}" alt="${item.text}">
+                        <h3>${item.text}</h3>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(initCircularGalleries, 100);
+}); 
