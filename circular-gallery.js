@@ -48,7 +48,7 @@ function initCircularGalleries() {
     const roboticsContainer = document.getElementById('robotics-gallery');
     if (roboticsContainer) {
         const roboticsItems = [
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg', text: "R³: RoboRush" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg', text: "R²: RoboRush" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/rl-terms-1200x800-1.jpg', text: "G.O.B: Game of Bots" },
             { image: 'https://picsum.photos/seed/robot3/800/600?grayscale', text: "BALLISTA: RoboSoccer" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/aisle-1850106_1920.jpg', text: "Labyrinx: Bot Maze" },
