@@ -48,8 +48,8 @@ function initCircularGalleries() {
     const roboticsContainer = document.getElementById('robotics-gallery');
     if (roboticsContainer) {
         const roboticsItems = [
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg', text: "R²: RoboRush" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/rl-terms-1200x800-1.jpg', text: "G.O.B: Game of Bots" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg?raw=true', text: "R²: RoboRush" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/gob.jpeg?raw=true', text: "G.O.B: Game of Bots" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/rl-terms-1200x800-1.jpg?raw=true', text: "BALLISTA: RoboSoccer" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/aisle-1850106_1920.jpg?raw=true', text: "Labyrinx: Bot Maze" },
             { image: 'https://raw.githubusercontent.com/Thecodlink/jps_techno_fiato/refs/heads/main/line-follwer-1.webp', text: "LuxLinea: Path Bot Race" },
