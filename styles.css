@@ -2150,7 +2150,7 @@ html {
     height: 150px; /* Adjust size as needed */
     opacity: 0;
     animation: logo-intro 3s ease-out forwards;
-    animation-delay:logo-exit 5s ease-out backwards;
+    animation-delay:logo-exit 1s ease-out backwards;
 }
 
 #animated-logo img {
