@@ -230,7 +230,22 @@ function initHorizontalScroll() {
         
         // Initialize indicators
         leftIndicator.style.opacity = '0.3';
+    
     }
+    gsap.to('#animated-logo', {
+    scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'bottom bottom',
+        end: '+=1000', // Adjust this value to control how far it scrolls down
+        scrub: 1, // Smoothly link animation to scroll
+        onEnter: () => {
+            document.getElementById('animated-logo').style.animation = 'logo-exit 2s forwards';
+        },
+        onLeaveBack: () => {
+            document.getElementById('animated-logo').style.animation = 'logo-intro 2s forwards';
+        }
+    }
+});
 }
 
 // Dynamic background transitions - minimal changes
