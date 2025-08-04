@@ -75,7 +75,7 @@ function initCircularGalleries() {
         const techItems = [
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/model.png?raw=true', text: "Modelus Virtuo" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/man-5638146.jpg?raw=true', text: "Editra" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/cyber-2377718_1920.jpg?raw=true', text: "Assembyte" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/code-1076536_1920.jpg?raw=true', text: "Bytecoder" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/astronaut-6771896.jpg?raw=true', text: "Pixel Petra" }
         ];
         
