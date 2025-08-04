@@ -49,7 +49,7 @@ function initCircularGalleries() {
     if (roboticsContainer) {
         const roboticsItems = [
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg?raw=true', text: "R²: RoboRush" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/gob.jpeg?raw=true', text: "G.O.B: Game of Bots" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/WhatsApp%20Image%202025-08-04%20at%2020.03.31.jpeg?raw=true', text: "G.O.B: Game of Bots" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/rl-terms-1200x800-1.jpg?raw=true', text: "BALLISTA: RoboSoccer" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/aisle-1850106_1920.jpg?raw=true', text: "Labyrinx: Bot Maze" },
             { image: 'https://raw.githubusercontent.com/Thecodlink/jps_techno_fiato/refs/heads/main/line-follwer-1.webp', text: "LuxLinea: Path Bot Race" },
@@ -74,7 +74,7 @@ function initCircularGalleries() {
     if (techContainer) {
         const techItems = [
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/model.png?raw=true', text: "Modelus Virtuo" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/man-5638146.jpg?raw=true', text: "Cine Frame" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/man-5638146.jpg?raw=true', text: "Editra" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/cyber-2377718_1920.jpg?raw=true', text: "Assembyte" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/astronaut-6771896.jpg?raw=true', text: "Pixel Petra" }
         ];
