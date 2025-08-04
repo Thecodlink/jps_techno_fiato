@@ -28,7 +28,7 @@ const eventTitles = {
     luxlinea: 'LuxLinea: Path Bot Race',
     technova: 'TechNova: Innovation Challenge',
     modelus: 'Modelus Virtuo',
-    cineframe: 'Cine Frame',
+    cineframe: 'Editra',
     assembyte: 'Assembyte',
     pixelpetra: 'Pixel Petra',
     registration: 'Join TECHNOFIATO'
