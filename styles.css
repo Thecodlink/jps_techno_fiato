@@ -1306,7 +1306,106 @@ body {
     color: var(--primary-color);
     text-align: center;
     border: 1px solid rgba(0, 255, 255, 0.2);
+} 
+/* Dynamic neon glow colors for events */
+.event-card[data-event="roborush"] {
+    box-shadow: var(--neon-cyan);
+    border-color: rgba(0, 255, 255, 0.3);
 }
+
+.event-card[data-event="gob"] {
+    box-shadow: var(--neon-magenta);
+    border-color: rgba(255, 0, 255, 0.3);
+}
+
+.event-card[data-event="ballista"] {
+    box-shadow: var(--neon-yellow);
+    border-color: rgba(255, 255, 0, 0.3);
+}
+
+.event-card[data-event="labyrinx"] {
+    box-shadow: var(--neon-green);
+    border-color: rgba(0, 255, 0, 0.3);
+}
+
+.event-card[data-event="luxlinea"] {
+    box-shadow: var(--neon-blue);
+    border-color: rgba(0, 150, 255, 0.3);
+}
+
+.event-card[data-event="technova"] {
+    box-shadow: var(--neon-orange);
+    border-color: rgba(255, 165, 0, 0.3);
+}
+
+.event-card[data-event="modelus"] {
+    box-shadow: var(--neon-purple);
+    border-color: rgba(128, 0, 255, 0.3);
+}
+
+.event-card[data-event="cineframe"] {
+    box-shadow: var(--neon-red);
+    border-color: rgba(255, 0, 0, 0.3);
+}
+
+.event-card[data-event="assembyte"] {
+    box-shadow: var(--neon-pink);
+    border-color: rgba(255, 20, 147, 0.3);
+}
+
+.event-card[data-event="pixelpetra"] {
+    box-shadow: var(--neon-lime);
+    border-color: rgba(50, 205, 50, 0.3);
+}
+
+/* Card Content */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-align: center;
+    text-shadow: var(--neon-glow);
+    margin-bottom: 1rem;
+}
+
+.event-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail {
+    background: rgba(0, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    border: 1px solid rgba(0, 255, 255, 0.2);
 
 /* About TECHNOFIATO Section */
 .about-section {
@@ -2186,4 +2285,98 @@ html {
         opacity: 0;
         transform: translate(-50%, 120%) scale(0) rotate(360deg);
     }
+}
+/* =================================================================
+EVENT DETAILS SECTION
+================================================================== */
+#event-details-section {
+    padding: 4rem 2rem;
+    background: #080808; /* Slightly different dark shade */
+}
+
+#event-details-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.event-detail-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(15px);
+    transition: all 0.4s ease;
+    scroll-margin-top: 120px; /* Offset for sticky header */
+}
+
+.event-detail-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+    border-color: rgba(0, 255, 255, 0.2);
+}
+
+.detail-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-shadow: var(--neon-glow);
+}
+
+.detail-card-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.detail-card-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.detail-section h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-shadow: var(--neon-glow-pink);
+}
+
+.detail-section p,
+.detail-section ul {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.detail-section ul li {
+    padding-left: 1.2em;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.detail-section ul li::before {
+    content: '»';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
