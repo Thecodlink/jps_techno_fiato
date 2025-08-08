@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schedule | TECHNOFIATO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Bebas+Neue:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #0e1a2b 100%);
+        }
+        #particles-js {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+        }
+        .schedule-main-container {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 4rem 1rem 2rem 1rem;
+        }
+        .schedule-back-btn {
+            position: absolute;
+            top: 2.5rem;
+            left: 2.5rem;
+            z-index: 10;
+            padding: 0.7em 2em;
+            background: linear-gradient(90deg,var(--primary-color),var(--secondary-color));
+            color: #0a0a0a;
+            font-family: 'Bebas Neue','Futura',sans-serif;
+            font-size: 1.3rem;
+            border-radius: 30px;
+            box-shadow: 0 0 18px var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: background 0.2s,box-shadow 0.2s;
+        }
+        .schedule-title {
+            font-family: 'Bebas Neue', 'Futura', 'Orbitron', sans-serif;
+            font-size: 3.2rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.3em;
+            margin-bottom: 2.2rem;
+            margin-top: 0.5rem;
+            text-shadow: 0 0 18px var(--primary-color), 0 0 40px var(--primary-color);
+            background: none;
+        }
+        .schedule-container {
+            background: rgba(10, 25, 47, 0.92);
+            border: 1.5px solid var(--primary-color);
+            box-shadow: 0 0 40px 0 var(--primary-color), 0 0 120px 0 var(--secondary-color);
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .schedule-timeline {
+            margin-top: 2rem;
+        }
+        .timeline-item .event-name {
+            font-family: 'Bebas Neue', 'Futura', 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.1em;
+            margin-bottom: 0.7rem;
+            margin-top: 0.2rem;
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+        .timeline-item:last-child {
+            margin-bottom: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="schedule-main-container">
+        <a href="index.html" class="schedule-back-btn">&larr; Back to Home</a>
+        <h2 class="schedule-title">Event Schedule</h2>
+        <div class="schedule-container">
+            <div class="schedule-timeline">
+                <div class="timeline-item" data-time="9:00 AM">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="time-slot">9:00 AM</div>
+                        <h3 class="event-name">Opening Ceremony</h3>
+                        <p class="event-description">Welcome to TECHNOFIATO</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-time="10:00 AM">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="time-slot">10:00 AM</div>
+                        <h3 class="event-name">MachineFiato Events</h3>
+                        <p class="event-description">Robotics competitions begin</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-time="11:30 AM">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="time-slot">11:30 AM</div>
+                        <h3 class="event-name">Techélon Events</h3>
+                        <p class="event-description">Technology challenges start</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-time="1:00 PM">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="time-slot">1:00 PM</div>
+                        <h3 class="event-name">Lunch Break</h3>
+                        <p class="event-description">Networking and refreshments</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-time="2:30 PM">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="time-slot">2:30 PM</div>
+                        <h3 class="event-name">Final Rounds</h3>
+                        <p class="event-description">Championship matches</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-time="5:00 PM">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="time-slot">5:00 PM</div>
+                        <h3 class="event-name">Closing Ceremony</h3>
+                        <p class="event-description">Awards and recognition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Animate timeline items on scroll (like index.html)
+    function animateTimeline() {
+        const items = document.querySelectorAll('.timeline-item');
+        items.forEach((item, i) => {
+            item.style.opacity = 0;
+            item.style.transform = 'translateY(50px)';
+        });
+        function reveal() {
+            items.forEach((item, i) => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    item.style.transition = 'all 0.8s cubic-bezier(0.4,0,0.2,1)';
+                    item.style.opacity = 1;
+                    item.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 60 },
+                color: { value: '#00fff7' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3 },
+                size: { value: 3 },
+                move: { enable: true, speed: 1.2 }
+            },
+            interactivity: {
+                events: { onhover: { enable: true, mode: 'repulse' } },
+                modes: { repulse: { distance: 80, duration: 0.4 } }
+            },
+            retina_detect: true
+        });
+        animateTimeline();
+    });
+    </script>
+</body>
+</html>
+
