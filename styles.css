@@ -313,8 +313,8 @@ body {
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
+  width: 4px;
+  height: 4px;
   position: relative;
   display: flex;
   align-items: center;
@@ -1893,7 +1893,9 @@ body {
     color: var(--primary-color);
 }
 
-/* Contact Footer */
+/* =================================================================
+  Contact Footer
+  ================================================================= */
 .contact-footer {
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(20px);
@@ -1924,6 +1926,7 @@ body {
 
 .footer-section ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-section ul li {
@@ -1931,6 +1934,86 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* =================================================================
+  Contact Us Section
+  ================================================================= */
+.contact-section {
+    min-height: 60vh;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 0 30px rgba(0,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-shadow: var(--neon-glow);
+}
+
+.contact-subtitle {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-shadow: var(--neon-glow-pink);
+}
+
+.contact-description {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    min-width: 180px;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.core-team {
+    margin-top: 2rem;
+}
+
+.core-team h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.core-team ul {
+    list-style: none;
+    padding: 0;
+}
+
+.core-team li {
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+}
 /* Modal Styles */
 .modal {
     display: none;
