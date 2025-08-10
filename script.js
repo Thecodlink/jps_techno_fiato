@@ -17,10 +17,9 @@ const backgroundThemes = {
     registration: 'var(--bg-theme-1)'
 };
 
-
 // Event titles for sticky header
 const eventTitles = {
-    hero: 'Welcome to TECHNOFIATO',
+    hero: 'Welcome to TECHNO FIATO',
     roborush: 'R³: RoboRush',
     gob: 'G.O.B: Game of Bots',
     ballista: 'BALLISTA: RoboSoccer',
@@ -28,10 +27,10 @@ const eventTitles = {
     luxlinea: 'LuxLinea: Path Bot Race',
     technova: 'TechNova: Innovation Challenge',
     modelus: 'Modelus Virtuo',
-    cineframe: 'Editra',
+    cineframe: 'Cine Frame',
     assembyte: 'Assembyte',
     pixelpetra: 'Pixel Petra',
-    registration: 'Join TECHNOFIATO'
+    registration: 'Join TECHNO FIATO'
 };
 
 // Neon glow colors for dynamic effects
@@ -230,22 +229,7 @@ function initHorizontalScroll() {
         
         // Initialize indicators
         leftIndicator.style.opacity = '0.3';
-    
     }
-    gsap.to('#animated-logo', {
-    scrollTrigger: {
-        trigger: '.hero-section',
-        start: 'bottom bottom',
-        end: '+=1000', // Adjust this value to control how far it scrolls down
-        scrub: 1, // Smoothly link animation to scroll
-        onEnter: () => {
-            document.getElementById('animated-logo').style.animation = 'logo-exit 2s forwards';
-        },
-        onLeaveBack: () => {
-            document.getElementById('animated-logo').style.animation = 'logo-intro 2s forwards';
-        }
-    }
-});
 }
 
 // Dynamic background transitions - minimal changes
@@ -308,111 +292,113 @@ function initBackgroundTransitions() {
 
 // Particle.js Configuration
 function initParticles() {
-    particlesJS('particles-js', {
-        particles: {
-            number: {
-                value: 50,
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: '#00ffff'
-            },
-            shape: {
-                type: 'circle',
-                stroke: {
-                    width: 0,
-                    color: '#000000'
-                },
-                polygon: {
-                    nb_sides: 5
-                }
-            },
-            opacity: {
-                value: 0.3,
-                random: false,
-                anim: {
-                    enable: true,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false
-                }
-            },
-            size: {
-                value: 2,
-                random: true,
-                anim: {
-                    enable: false,
-                    speed: 40,
-                    size_min: 0.1,
-                    sync: false
-                }
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#00ffff',
-                opacity: 0.2,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 3,
-                direction: 'none',
-                random: false,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-                attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200
-                }
-            }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: 'repulse'
-                },
-                onclick: {
-                    enable: true,
-                    mode: 'push'
-                },
-                resize: true
-            },
-            modes: {
-                grab: {
-                    distance: 400,
-                    line_linked: {
-                        opacity: 1
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 50,
+                    density: {
+                        enable: true,
+                        value_area: 800
                     }
                 },
-                bubble: {
-                    distance: 400,
-                    size: 40,
-                    duration: 2,
-                    opacity: 8,
-                    speed: 3
+                color: {
+                    value: '#00ffff'
                 },
-                repulse: {
-                    distance: 200,
-                    duration: 0.4
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
                 },
-                push: {
-                    particles_nb: 4
+                opacity: {
+                    value: 0.3,
+                    random: false,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
                 },
-                remove: {
-                    particles_nb: 2
+                size: {
+                    value: 2,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#00ffff',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
                 }
-            }
-        },
-        retina_detect: true
-    });
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    }
 }
 
 // Event Data for Modals
@@ -675,84 +661,77 @@ const eventData = {
     }
 };
 
-// Modal functionality
-function openEventModal(eventType) {
-    const modal = document.getElementById('event-modal');
-    const modalTitle = document.querySelector('.modal-title');
-    const modalIcon = document.querySelector('.modal-icon');
-    const eventOverview = document.querySelector('.event-overview');
-    const eventRules = document.querySelector('.event-rules');
-    const eventSpecs = document.querySelector('.event-specs');
-    const eventJudging = document.querySelector('.event-judging');
-    const closeBtn = document.querySelector('.close');
-    
-    const event = eventData[eventType];
-    
-    if (event) {
-        modalTitle.textContent = event.title;
-        modalIcon.innerHTML = `<i class="${event.icon}"></i>`;
-        
-        eventOverview.innerHTML = `
-            <h3>Overview</h3>
-            <p>${event.overview}</p>
-        `;
-        
-        eventRules.innerHTML = `
-            <h3>Rules</h3>
-            <ul>
-                ${event.rules.map(rule => `<li>${rule}</li>`).join('')}
-            </ul>
-        `;
-        
-        eventSpecs.innerHTML = `
-            <h3>Specifications</h3>
-            <ul>
-                ${event.specs.map(spec => `<li>${spec}</li>`).join('')}
-            </ul>
-        `;
-        
-        eventJudging.innerHTML = `
-            <h3>Judging Criteria</h3>
-            <ul>
-                ${event.judging.map(criterion => `<li>${criterion}</li>`).join('')}
-            </ul>
-        `;
-        
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-        
-        // Animate modal entrance
-        gsap.fromTo('.modal-content', 
-            {
-                opacity: 0,
-                scale: 0.8,
-                y: 50
-            },
-            {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-                duration: 0.5,
-                ease: "power3.out"
-            }
-        );
-    }
-}
+//light modal
+const light = document.getElementById("light");
 
-// Close modal
-function closeModal() {
-    const modal = document.getElementById('event-modal');
-    gsap.to('.modal-content', {
-        opacity: 0,
-        scale: 0.8,
-        y: 50,
-        duration: 0.3,
-        ease: "power3.in",
-        onComplete: () => {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+// Animate the logo out on scroll
+gsap.to('#animated-logo', {
+    scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'bottom bottom',
+        end: '+=1000', // Adjust this value to control how far it scrolls down
+        scrub: 1, // Smoothly link animation to scroll
+        onEnter: () => {
+            document.getElementById('animated-logo').style.animation = 'logo-exit 2s forwards';
+        },
+        onLeaveBack: () => {
+            document.getElementById('animated-logo').style.animation = 'logo-intro 2s forwards';
         }
-    });
+    }
+});
+  light.style.background = `radial-gradient(
+    circle at ${x}px ${y}px,
+    rgba(0, 255, 255, 0.15),
+    transparent 60%
+  )`;
+});
+
+// Generate Event Details Section
+function generateEventDetails() {
+    const container = document.getElementById('event-details-container');
+    if (!container) return;
+
+    let allDetailsHTML = '';
+
+    for (const eventKey in eventData) {
+        const event = eventData[eventKey];
+        allDetailsHTML += `
+            <div class="event-detail-card" id="details-${eventKey}">
+                <div class="detail-card-header">
+                    <i class="${event.icon} detail-card-icon"></i>
+                    <h3 class="detail-card-title">${event.title}</h3>
+                </div>
+                <div class="detail-card-body">
+                    <div class="detail-section">
+                        <h4>Overview</h4>
+                        <p>${event.overview}</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Rules</h4>
+                        <ul>
+                            ${event.rules.map(rule => `<li>${rule}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Specifications</h4>
+                        <ul>
+                            ${event.specs.map(spec => `<li>${spec}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Judging Criteria</h4>
+                        <ul>
+                            ${event.judging.map(criterion => `<li>${criterion}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    container.innerHTML = allDetailsHTML;
 }
 
 // Event listeners
@@ -763,25 +742,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initHorizontalScroll();
     initParticles();
     initCountUpAnimations();
-    initScheduleAnimations();
-    
-    // Modal event listeners
-    const modal = document.getElementById('event-modal');
-    const closeBtn = document.querySelector('.close');
-    
-    closeBtn.addEventListener('click', closeModal);
-    
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-    
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === 'block') {
-            closeModal();
-        }
-    });
+    initScheduleAnimations();    
+    generateEventDetails();
     
     // Form submission
     const registrationForm = document.querySelector('.registration-form');
@@ -834,13 +796,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                gsap.to(window, {
-                    duration: 1,
-                    scrollTo: {
-                        y: target,
-                        offsetY: 100
-                    },
-                    ease: "power3.inOut"
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
         });
@@ -961,6 +919,3 @@ function initScheduleAnimations() {
         observer.observe(item);
     });
 }
-
-// Make openEventModal globally available
-window.openEventModal = openEventModal; 
