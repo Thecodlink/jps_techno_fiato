@@ -311,7 +311,7 @@ body {
 /* Logo Section */
 .logo-container {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 1rem;
 }
 
