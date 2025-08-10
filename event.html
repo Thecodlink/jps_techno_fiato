@@ -3,430 +3,406 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Details | TECHNOFIATO</title>
+    <title>TECHNO FIATO - BUILT TO COMPETE, PROGRAMMED TO WIN</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/postprocessing@6.33.4/build/postprocessing.min.js"></script>
+    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <style>
-        body {
-            background: linear-gradient(135deg, #0a0a0a 0%, #0e1a2b 100%);
-        }
-        #particles-js {
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            z-index: 0;
-        }
-        .event-main-container {
-            position: relative;
-            z-index: 2;
-        }
-        .event-title-minimal {
-            font-family: 'Bebas Neue', 'Futura', 'Orbitron', sans-serif;
-            font-size: 3.2rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            border-bottom: 3px solid var(--primary-color);
-            display: inline-block;
-            padding-bottom: 0.3em;
-            margin-bottom: 2.2rem;
-            margin-top: 0.5rem;
-            text-shadow: 0 0 18px var(--primary-color), 0 0 40px var(--primary-color);
-        }
-        .event-section-block h3 {
-            font-family: 'Bebas Neue', 'Futura', 'Orbitron', sans-serif;
-            font-size: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 1.2rem;
-            margin-top: 0.5rem;
-            position: relative;
-            color: var(--primary-color);
-        }
-        .event-section-block h3::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            margin-top: 0.3em;
-            border-radius: 2px;
-            box-shadow: 0 0 10px var(--primary-color);
-        }
-        .event-card-minimal {
-            background: rgba(10, 25, 47, 0.92);
-            box-shadow: 0 0 40px 0 var(--primary-color), 0 0 120px 0 var(--secondary-color);
-        }
-    </style>
+    
+    <!-- Typed.js -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <script>
+        // Initialize Particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: "#00ffe1"
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
+                        }
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                        anim: {
+                            enable: false,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 40,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#00ffe1",
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 6,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: {
+                            enable: false,
+                            rotateX: 600,
+                            rotateY: 1200
+                        }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "repulse"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 400,
+                            line_linked: {
+                                opacity: 1
+                            }
+                        },
+                        bubble: {
+                            distance: 400,
+                            size: 40,
+                            duration: 2,
+                            opacity: 8,
+                            speed: 3
+                        },
+                        repulse: {
+                            distance: 200,
+                            duration: 0.4
+                        },
+                        push: {
+                            particles_nb: 4
+                        },
+                        remove: {
+                            particles_nb: 2
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
 </head>
+
 <body>
+    
     <div id="particles-js"></div>
-    <div class="event-main-container">
-        <a href="index.html" class="event-back-link event-back-btn" style="position:fixed;top:90%;left:85%;transform:translateY(-50%);z-index:10;padding:0.7em 2em;background:linear-gradient(90deg,var(--primary-color),var(--secondary-color));color:#0a0a0a;font-family:'Bebas Neue','Futura',sans-serif;font-size:1.1rem;border-radius:30px;box-shadow:0 0 18px var(--primary-color);text-decoration:none;letter-spacing:0.08em;transition:background 0.2s,box-shadow 0.2s;">&larr; Back to Home</a>
-        <div class="event-card-minimal" id="event-details" style="margin-bottom: 3.5rem;">
-            <!-- Event details will be injected here -->
+    
+
+    <!-- Background Layers -->
+    <div class="background-container">
+        <div class="bg-layer bg-layer-1"></div>
+        <div class="bg-layer bg-layer-2"></div>
+        <div class="bg-layer bg-layer-3"></div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-image-wrapper">
+                    <img src="https://github.com/Thecodlink/jps_techno_fiato/blob/main/TECHNO%20FIATO%20LOGO%20PNG%20FINAL.png?raw=true" alt="Technofiato Logo" class="logo-img" />
+                </div>
+                <div class="header-text-container">
+                    <span class="logo-text">TECHNO FIATO</span>
+                    <span class="welcome-text">Welcome to TECHNO FIATO</span>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="nav-menu">
+                    <a href="https://www.jpslucknow.com/" class="nav-link">Home</a>
+                    <a href="#events" class="nav-link">Events</a>
+                    <a href="event-schedule.html" class="nav-link">Schedule</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <a href="#" class="register-btn" onclick="openRegistrationForm()">Register Now</a>
+            </nav>
+        </div>
+    </header>
+
+   <!-- Main Scroll Container -->
+    <main class="scroll-container">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section minimal-hero" data-event="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span>TECHNO</span><span>FIATO</span>
+                </h1>
+                <p class="hero-tagline">
+                    <span id="typed-text"></span>
+                </p>
+                <div id="animated-logo">
+                    <img src="https://github.com/Thecodlink/jps_techno_fiato/blob/main/TECHNO%20FIATO%20LOGO%20PNG%20FINAL.png?raw=true" alt="Animated Logo" />
+                </div>
+            </div>
+            <!-- Background Effect -->
+            <div class="hero-bg-glow"></div>
+        </section>
+
+        <!-- About TECHNOFIATO Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2 class="about-title">About TECHNO FIATO</h2>
+                    <div class="about-quote">
+                        <p>Innovation is the ability to see change as an opportunity – not a threat" - Steve Jobs</p>
+                    </div>
+                    <div class="about-description">
+                        <p>In a world driven by code and crafted by gears, welcome to the future—Welcome to Techno Fiato, a celebration of human ingenuity and machine genius where the most daring minds of today create the future, gears dance to logic, and circuits come to life.</p>
+                        <p>Techno Fiato, which was created by combining the words "Technology" and "Fiato" (which means breath and rhythm), is more than just a single event. Robots, code, and the people who created them are all part of this innovative heartbeat.</p>
+                        <p>The ultimate fusion of robotics and technology, TechnoFiato is designed to encourage, test, and unleash the upcoming generation of makers, innovators, coders, and problem-solvers.</p>
+                    </div>
+                    <div class="scroll-reveal-block">
+                        <h3>Get in Touch</h3>
+                        <p>Have questions about TECHNO FIATO? Reach out to our team for more information.</p>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="11" data-suffix="">0</div>
+                        <div class="stat-label">Events</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="2" data-suffix="">0</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="20" data-suffix="+">0</div>
+                        <div class="stat-label">Teams</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="10" data-suffix="">0</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events & Competitions Section -->
+        <section id="events" class="events-section">
+            <div class="events-container">
+                <h2 class="section-title">Events & Competitions</h2>
+                
+                <!-- Machina Fiato - Robotics Events -->
+                <div class="event-category">
+                    <h3 class="category-title">Machina Fiato - Robotics Events</h3>
+                    <div class="event-note" style="text-align:center;margin-bottom:1.5rem;font-family:'Orbitron',sans-serif;font-size:1.1rem;color:var(--primary-color);text-shadow:0 0 10px var(--primary-color);letter-spacing:1px;">Click on the events for more details.</div>
+                    <div class="circular-gallery-container" id="robotics-gallery">
+                        <!-- CircularGallery will be initialized here -->
+                    </div>
+                </div>
+
+                <!-- Techélon - Technology Events -->
+                <div class="event-category">
+                    <h3 class="category-title">Techélon - Technology Events</h3>
+                    <div class="event-note" style="text-align:center;margin-bottom:1.5rem;font-family:'Orbitron',sans-serif;font-size:1.1rem;color:var(--primary-color);text-shadow:0 0 10px var(--primary-color);letter-spacing:1px;">Click on the events for more details.</div>
+                    <div class="circular-gallery-container" id="tech-gallery">
+                        <!-- CircularGallery will be initialized here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Event Modals -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <div class="modal-icon"></div>
+                <h2 class="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="event-overview"></div>
+                <div class="event-rules"></div>
+                <div class="event-specs"></div>
+                <div class="event-judging"></div>
+            </div>
         </div>
     </div>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container scroll-reveal-block">
+            <h2 class="contact-title">Contact Us</h2>
+            <p class="contact-subtitle">Get in Touch</p>
+            <p class="contact-description">Have questions about TECHNO FIATO? Reach out to our team for more information.</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <strong>Venue</strong><br>
+                    Jagran Public School, Lucknow
+                </div>
+                <div class="contact-item">
+                    <strong>Email</strong><br>
+                    <a href="mailto:technofiato@jpslucknow.com">technofiato@jpslucknow.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Phone</strong><br>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                </div>
+            </div>
+            <div class="core-team">
+                <h3>Core Team</h3>
+                <ul>
+                    <li>Shivansh Mishra – Event Director </li>
+                    <li>Atharv Dwivedi – Event Director </li>
+                    <li>Ojasvi Karn – Head of Operations & Logistics</li>
+                    <li>Pratyush Singh – Event Head Robotics</li>
+                    <li>Aaditya Saxena – Event Head Tech</li>
+                    <li>Raghav Chaudhary - Event Head Robotics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer class="contact-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TECHNO FIATO</h3>
+                <p>BUILD TO COMPETE, PROGRAMMED TO WIN</p>
+                <p>Presented by Jagran Public School, Lucknow</p>
+            </div>
+            <div class="footer-section">
+                <h4>Core Team</h4>
+                <ul>
+                    <li>Shivansh Mishra - Event Director</li>
+                    <li>Atharv Dwivedi - Event Director</li>
+                    <li>Ojasvi Karn - Head of Operations & Logistics</li>
+                    <li>Pratyush Singh - Event Head Robotics</li>
+                    <li>Aaditya Saxena - Event Head Tech</li>
+                    <li>Raghav Chaudhary - Event Head Robotics</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:technofiato@jpslucknow.com">technofiato@jpslucknow.com</a></p>
+                <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p>Venue: Jagran Public School, Lucknow</p>
+                <p><a href="https://www.instagram.com/jps_technofiato/" target="_blank">Follow Us on Instagram</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/ogl@0.0.78/dist/ogl.min.js"></script>
+    <script src="script.js"></script>
+    <script src="hyperspeed.js"></script>
+    <script src="circular-gallery.js"></script>
+    
     <script>
-    // Event data (copy from script.js for consistency)
-    const eventData = {
-        roborush: {
-            title: "R³: RoboRush",
-            icon: "fas fa-robot",
-            accent: "cyan",
-            overview: "Control your robot through a wild obstacle course with strategic challenges. Complete the obstacle fastest to win!",
-            rules: [
-                "Max 2 participants per team",
-                "Bot max size: 25cm x 25cm",
-                "Manual control (wired or wireless)",
-                "Time penalties for going off-track: +15 sec",
-                "Skipping steps: +20 sec",
-                "Touching your bot: +10 sec",
-                "Fastest completion wins"
-            ],
-            specs: [
-                "Bot dimensions: 25cm x 25cm maximum",
-                "Power: Wired or wireless control",
-                "Control: Manual remote operation",
-                "Arena: Obstacle course with ramps and curves"
-            ],
-            judging: [
-                "Completion time (primary)",
-                "Number of penalties",
-                "Control precision",
-                "Strategic navigation"
-            ]
-        },
-        gob: {
-            title: "G.O.B: Game of Bots",
-            icon: "fas fa-fist-raised",
-            accent: "magenta",
-            overview: "Bot vs Bot in a circular arena, gaining points through strategic hits, knockouts, and survival. A dynamic arena-style setup for intense combat action!",
-            rules: [
-                "1v1 or Team-based bot matches",
-                "Points awarded for strategic hits",
-                "Points awarded for knockouts",
-                "Wired or wireless bots allowed",
-                "Add-ons allowed but checked by core team",
-                "Ring size: Circular combat arena",
-                "Match duration: 3 minutes per round"
-            ],
-            specs: [
-                "Bot dimensions: 25cm x 25cm maximum",
-                "Weight limit: 3kg maximum",
-                "Power: Wired or wireless",
-                "Weapons: No flame or liquid-based components"
-            ],
-            judging: [
-                "Total points scored",
-                "Control precision",
-                "Engineering design",
-                "Strategic gameplay"
-            ]
-        },
-        ballista: {
-            title: "BALLISTA: RoboSoccer",
-            icon: "fas fa-futbol",
-            accent: "yellow",
-            overview: "Two teams go head-to-head in a fast-paced soccer match using remote-controlled bots to push/pull a lightweight ball into the opponent's goalpost.",
-            rules: [
-                "Max 2 participants per team",
-                "Arena has fixed goalposts and smooth boundary",
-                "Ball size and weight specified on match day",
-                "Only remote-controlled bots allowed",
-                "No weapons, flame, or liquid-based components",
-                "Match duration: 4 minutes per game (2 mins per half)",
-                "No intentional ramming/damaging opponent's bot",
-                "Teams must remain behind control zone line",
-                "Scoring: 1 point per goal, knockout format"
-            ],
-            specs: [
-                "Bot dimensions: 25cm x 25cm maximum",
-                "Weight limit: 3kg maximum",
-                "Power: Wired (through battery) or wireless (RC module)",
-                "Control: Remote operation only"
-            ],
-            judging: [
-                "Goals scored",
-                "Team coordination",
-                "Bot maneuverability",
-                "Strategic gameplay"
-            ]
-        },
-        labyrinx: {
-            title: "Labyrinx: Bot Maze",
-            icon: "fas fa-route",
-            accent: "green",
-            overview: "Navigate your bot through a challenging maze filled with dead ends, detours, and checkpoints. Speed and precision both matter in this autonomous challenge.",
-            rules: [
-                "Max 2 members per team",
-                "Maze path revealed only 2 minutes before run",
-                "Checkpoints may be present; missing one results in time penalties",
-                "Bot must not touch walls more than 3 times",
-                "Max time limit: 5 minutes per run",
-                "Fastest bot with least penalties wins"
-            ],
-            specs: [
-                "Bot dimensions: 20cm x 20cm maximum",
-                "Power: On-board batteries only",
-                "Control: Autonomous operation",
-                "Sensors: IR/reflective sensors for wall detection"
-            ],
-            judging: [
-                "Completion time",
-                "Number of wall touches",
-                "Checkpoint accuracy",
-                "Path optimization"
-            ]
-        },
-        luxlinea: {
-            title: "LuxLinea: Path Bot Race",
-            icon: "fas fa-road",
-            accent: "blue",
-            overview: "An autonomous Arduino bot must follow a black path on a white surface and complete the course as fast as possible. Pure autonomous navigation challenge!",
-            rules: [
-                "Max 2 participants per team",
-                "Bot must be Arduino-based",
-                "Only IR/reflective sensors allowed for path detection",
-                "Path may include curves, 90° turns, T-junctions, and mild inclines",
-                "Off-track = Time penalty or disqualification (after 3 attempts)",
-                "Time limit: 3 minutes per bot",
-                "Fastest and most accurate bot wins"
-            ],
-            specs: [
-                "Bot dimensions: 20cm x 20cm maximum",
-                "No human control after start",
-                "On-board power only",
-                "Sensors: IR/reflective sensors only"
-            ],
-            judging: [
-                "Completion time",
-                "Path following accuracy",
-                "Speed optimization",
-                "Autonomous performance"
-            ]
-        },
-        technova: {
-            title: "TechNova: Innovation Challenge",
-            icon: "fas fa-lightbulb",
-            accent: "orange",
-            overview: "Teams will present a working model using sensors and Arduino or basic robotics kits aimed at solving daily-life problems. Innovation meets practicality!",
-            rules: [
-                "Max 3 members per team",
-                "Pre-built models must be presented at venue",
-                "5 minutes for demo + 2 minutes Q&A by judges",
-                "Models must use at least 1 sensor (IR, ultrasonic, temperature, etc.)",
-                "Models must be working (functional demo required)",
-                "Bonus awarded for sustainable or eco-friendly projects"
-            ],
-            specs: [
-                "Hardware: Arduino or basic robotics kits",
-                "Sensors: Minimum 1 sensor required",
-                "Power: Self-contained power source",
-                "Size: Portable and demo-friendly"
-            ],
-            judging: [
-                "Innovation and creativity",
-                "Practicality and real-world application",
-                "Technical implementation",
-                "Presentation quality",
-                "Bonus: Sustainability factor"
-            ]
-        },
-        modelus: {
-            title: "Modelus Virtuo: 3D Modeling Showdown",
-            icon: "fas fa-cube",
-            accent: "purple",
-            overview: "Participants will use Blender to create a detailed 3D model based on a theme disclosed at the start of the event. This could be a product design, architectural model, character, or futuristic object.",
-            rules: [
-                "Solo or Teams of 2 (Grades 9-12)",
-                "Only Blender software allowed (pre-installed in school labs)",
-                "Time limit: 2.5 hours",
-                "No external asset imports or textures",
-                "Internet usage strictly prohibited",
-                "All renders must be original and made during the event"
-            ],
-            specs: [
-                "Software: Blender only",
-                "Hardware: School computer lab equipment",
-                "Theme: Disclosed at event start",
-                "Output: Rendered images and 3D model file"
-            ],
-            judging: [
-                "Complexity and detailing",
-                "Creativity and relevance to theme",
-                "Lighting and rendering techniques",
-                "Mesh cleanliness and topology",
-                "Realism or stylization as per theme"
-            ]
-        },
-        cineframe: {
-            title: "Cine Frame: Movie Making + Editing Challenge",
-            icon: "fas fa-video",
-            accent: "red",
-            overview: "A three-member team is required to shoot and edit a new video clip providing event coverage. The video must incorporate dialogue, transitions, and sound, using only the tools provided.",
-            rules: [
-                "Teams of 3 students from Grades 9-12",
-                "Internet access not allowed",
-                "No presets, templates, or stock footage from online sources",
-                "Must use only inbuilt effects, music, and transitions",
-                "Video must be rendered and submitted within specified time",
-                "Folder with presets, sound effects, and stock overlays provided"
-            ],
-            specs: [
-                "Software: Adobe Premiere Pro, Filmora, Adobe After Effects, Adobe Photoshop",
-                "Equipment: School computer lab",
-                "Duration: Event-specified time limit",
-                "Output: Final rendered video file"
-            ],
-            judging: [
-                "Storyline and theme alignment",
-                "Cinematic quality (angles and transitions)",
-                "Editing skill and originality",
-                "Sound design and music usage"
-            ]
-        },
-        assembyte: {
-            title: "Assembyte: Hardware Assembly Showdown",
-            icon: "fas fa-tools",
-            accent: "pink",
-            overview: "Participants will be tested on hardware skills, including assembling, disassembling, and diagnosing a PC. Bonus rounds may include identifying dummy faults or upgrading components.",
-            rules: [
-                "Solo event (Grades 9-12)",
-                "School provides PC parts and workspace",
-                "Rounds include: Fastest Full Assembly, Fault Identification, Cable management, Peripheral compatibility",
-                "Technical knowledge tested through MCQs or viva",
-                "Safety and ESD protocol awareness required"
-            ],
-            specs: [
-                "Hardware: PC components provided by school",
-                "Tools: Basic assembly tools available",
-                "Time: Event-specified time limits per round",
-                "Workspace: Dedicated assembly area"
-            ],
-            judging: [
-                "Speed and accuracy",
-                "Correct cable management",
-                "Technical knowledge (MCQs or viva)",
-                "Safety and ESD protocol awareness"
-            ]
-        },
-        pixelpetra: {
-            title: "Pixel Petra: MS Paint Design Sprint",
-            icon: "fas fa-palette",
-            accent: "lime",
-            overview: "Participants will use MS Paint to create art on a given theme (e.g., 'Future Tech,' 'Space City,' 'Eco World') in a limited time. Pure creativity challenge!",
-            rules: [
-                "Solo event (Grades 6-8)",
-                "Software: Microsoft Paint only",
-                "Time limit: 1 hour",
-                "No internet or references allowed",
-                "Theme announced just before the event"
-            ],
-            specs: [
-                "Software: Microsoft Paint",
-                "Hardware: School computer lab",
-                "Theme: Disclosed at event start",
-                "Output: Digital artwork file"
-            ],
-            judging: [
-                "Creativity and imagination",
-                "Use of MS Paint tools",
-                "Relevance to theme",
-                "Coloring and line work"
-            ]
-        }
-    };
-    // Get event type from query string
-    function getEventType() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('event');
-    }
-    function getAccentShadow(accent) {
-        switch(accent) {
-            case 'cyan': return '0 0 30px rgba(0,255,255,0.8)';
-            case 'magenta': return '0 0 30px rgba(255,0,255,0.8)';
-            case 'yellow': return '0 0 30px rgba(255,255,0,0.8)';
-            case 'green': return '0 0 30px rgba(0,255,0,0.8)';
-            case 'blue': return '0 0 30px rgba(0,150,255,0.8)';
-            case 'orange': return '0 0 30px rgba(255,165,0,0.8)';
-            case 'purple': return '0 0 30px rgba(128,0,255,0.8)';
-            case 'red': return '0 0 30px rgba(255,0,0,0.8)';
-            case 'pink': return '0 0 30px rgba(255,20,147,0.8)';
-            case 'lime': return '0 0 30px rgba(50,205,50,0.8)';
-            default: return '0 0 30px rgba(0,255,255,0.8)';
-        }
-    }
-    function renderEventDetails(eventType) {
-        const event = eventData[eventType];
-        const container = document.getElementById('event-details');
-        if (!event) {
-            container.innerHTML = `<div style="text-align:center;color:var(--secondary-color)"><h2>Event Not Found</h2><p>The event you are looking for does not exist.</p></div>`;
-            return;
-        }
-        // Set accent color
-        container.style.boxShadow = getAccentShadow(event.accent);
-        container.style.borderColor = getAccentShadow(event.accent).replace('0.8','0.3');
-        container.style.background = 'rgba(255,255,255,0.04)';
-        container.style.opacity = 0;
-        container.style.transform = 'translateY(40px) scale(0.96)';
-        setTimeout(() => {
-            container.style.transition = 'all 0.8s cubic-bezier(0.4,0,0.2,1)';
-            container.style.opacity = 1;
-            container.style.transform = 'translateY(0) scale(1)';
-        }, 100);
-        container.innerHTML = `
-            <div class="event-icon-minimal" style="text-shadow:${getAccentShadow(event.accent)}"><i class="${event.icon}"></i></div>
-            <div class="event-title-minimal" style="text-shadow:${getAccentShadow(event.accent)}">${event.title}</div>
-            <div class="event-section-block">
-                <h3>Overview</h3>
-                <p>${event.overview}</p>
-            </div>
-            <div class="event-section-block">
-                <h3>Rules</h3>
-                <ul>${event.rules.map(rule => `<li>${rule}</li>`).join('')}</ul>
-            </div>
-            <div class="event-section-block">
-                <h3>Specifications</h3>
-                <ul>${event.specs.map(spec => `<li>${spec}</li>`).join('')}</ul>
-            </div>
-            <div class="event-section-block" style="margin-bottom:2.5rem;">
-                <h3>Judging Criteria</h3>
-                <ul>${event.judging.map(j => `<li>${j}</li>`).join('')}</ul>
-            </div>
-        `;
-        // Animate each section
-        const blocks = container.querySelectorAll('.event-section-block');
-        blocks.forEach((block, i) => {
-            block.style.opacity = 0;
-            block.style.transform = 'translateY(30px)';
-            setTimeout(() => {
-                block.style.transition = 'all 0.7s cubic-bezier(0.4,0,0.2,1)';
-                block.style.opacity = 1;
-                block.style.transform = 'translateY(0)';
-            }, 400 + i * 180);
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Particles.js
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 60
+                    },
+                    "color": {
+                        "value": "#00fff7"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.3
+                    },
+                    "size": {
+                        "value": 3
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1.2
+                    }
+                },
+                "interactivity": {
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        }
+                    },
+                    "modes": {
+                        "repulse": {
+                            "distance": 80,
+                            "duration": 0.4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+
+            // Initialize Typed.js
+            var typed = new Typed("#typed-text", {
+                strings: [
+                    "Built to Compete...",
+                    "Programmed to Win."
+                ],
+                typeSpeed: 50,
+                backSpeed: 25,
+                backDelay: 1500,
+                loop: true
+            });
+
+            // Fix circular gallery click handlers
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.gallery-item')) {
+                    const item = e.target.closest('.gallery-item');
+                    const eventType = item.getAttribute('data-event');
+                    if (eventType) {
+                        window.location.href = `event.html?event=${eventType}`;
+                    }
+                }
+            });
         });
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 60 },
-                color: { value: '#00fff7' },
-                shape: { type: 'circle' },
-                opacity: { value: 0.3 },
-                size: { value: 3 },
-                move: { enable: true, speed: 1.2 }
-            },
-            interactivity: {
-                events: { onhover: { enable: true, mode: 'repulse' } },
-                modes: { repulse: { distance: 80, duration: 0.4 } }
-            },
-            retina_detect: true
-        });
-        const eventType = getEventType();
-        renderEventDetails(eventType);
-    });
+
+        // Registration form function
+        function openRegistrationForm() {
+            // Placeholder for Google Form link
+            alert('Registration form will be available soon!');
+            // Replace with: window.open('YOUR_GOOGLE_FORM_LINK', '_blank');
+        }
     </script>
 </body>
 </html> 
