@@ -15,7 +15,7 @@
         }
         #particles-js {
             position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
+            top: 0; left: 0; width: 100vw; height: 250vh;
             z-index: 0;
         }
         .schedule-main-container {
@@ -66,9 +66,89 @@
             max-width: 700px;
             width: 100%;
             margin: 0 auto;
+            position: relative;
         }
         .schedule-timeline {
             margin-top: 2rem;
+            position: relative;
+        }
+        .schedule-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+            transform: translateX(-50%);
+            border-radius: 2px;
+            box-shadow: 0 0 20px var(--primary-color);
+            z-index: 1;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .timeline-item:nth-child(odd) {
+            padding-right: 50%;
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) {
+            padding-left: 50%;
+            text-align: left;
+        }
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border: 4px solid var(--dark-bg);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--primary-color);
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover .timeline-marker {
+            transform: translate(-50%, -50%) scale(1.5);
+            box-shadow: 0 0 30px var(--primary-color), 0 0 60px var(--primary-color);
+        }
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 0 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        .timeline-content:hover::before {
+            left: 100%;
+        }
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px var(--primary-color);
         }
         .timeline-item .event-name {
             font-family: 'Bebas Neue', 'Futura', 'Orbitron', sans-serif;
@@ -187,4 +267,3 @@
     </script>
 </body>
 </html>
-
