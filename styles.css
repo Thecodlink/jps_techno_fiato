@@ -313,8 +313,8 @@ body {
 }
 
 .logo-icon {
-  width: 4px;
-  height: 4px;
+  width: 1px;
+  height: 1px;
   position: relative;
   display: flex;
   align-items: center;
