@@ -48,47 +48,65 @@ function initCircularGalleries() {
     const roboticsContainer = document.getElementById('robotics-gallery');
     if (roboticsContainer) {
         const roboticsItems = [
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg?raw=true', text: "R²: RoboRush" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/WhatsApp%20Image%202025-08-04%20at%2020.03.31.jpeg?raw=true', text: "G.O.B: Game of Bots" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/rl-terms-1200x800-1.jpg?raw=true', text: "BALLISTA: RoboSoccer" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/aisle-1850106_1920.jpg?raw=true', text: "Labyrinx: Bot Maze" },
-            { image: 'https://raw.githubusercontent.com/Thecodlink/jps_techno_fiato/refs/heads/main/line-follwer-1.webp', text: "LuxLinea: Path Bot Race" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/innovation-2901928_1920.jpg?raw=true', text: "TechNova: Innovation Challenge" }
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg?raw=true', text: "R²: RoboRash", eventType: "roborush" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/WhatsApp%20Image%202025-08-04%20at%2020.03.31.jpeg?raw=true', text: "G.O.B: Game of Bots", eventType: "gob" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/rl-terms-1200x800-1.jpg?raw=true', text: "BALLISTA: RoboSoccer", eventType: "ballista" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/aisle-1850106_1920.jpg?raw=true', text: "Labyrinx: Bot Maze", eventType: "labyrinx" },
+            { image: 'https://raw.githubusercontent.com/Thecodlink/jps_techno_fiato/refs/heads/main/line-follwer-1.webp', text: "LuxLinea: Path Bot Race", eventType: "luxlinea" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/innovation-2901928_1920.jpg?raw=true', text: "TechNova: Innovation Challenge", eventType: "technova" }
         ];
         
         // Simple gallery for now - will enhance later
         roboticsContainer.innerHTML = `
             <div class="gallery-items">
                 ${roboticsItems.map(item => `
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-event="${item.eventType}">
                         <img src="${item.image}" alt="${item.text}">
                         <h3>${item.text}</h3>
                     </div>
                 `).join('')}
             </div>
         `;
+        // Add click handlers for redirecting to event page
+        roboticsContainer.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const eventType = this.getAttribute('data-event');
+                if (eventType) {
+                    window.location.href = `event.html?event=${eventType}`;
+                }
+            });
+        });
     }
 
     // Technology Events Gallery
     const techContainer = document.getElementById('tech-gallery');
     if (techContainer) {
         const techItems = [
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/model.png?raw=true', text: "Modelus Virtuo" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/man-5638146.jpg?raw=true', text: "Editra" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/code-1076536_1920.jpg?raw=true', text: "Bytecoder" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/astronaut-6771896.jpg?raw=true', text: "Pixel Petra" }
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/model.png?raw=true', text: "Modelus Virtuo", eventType: "modelus" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/man-5638146.jpg?raw=true', text: "Editra", eventType: "editra" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/code-1076536_1920.jpg?raw=true', text: "Bytecoder", eventType: "bytecoder" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/astronaut-6771896.jpg?raw=true', text: "Pixel Petra", eventType: "pixelpetra" }
         ];
         
         techContainer.innerHTML = `
             <div class="gallery-items">
                 ${techItems.map(item => `
-                    <div class="gallery-item">
+                    <div class="gallery-item" data-event="${item.eventType}">
                         <img src="${item.image}" alt="${item.text}">
                         <h3>${item.text}</h3>
                     </div>
                 `).join('')}
             </div>
         `;
+        // Add click handlers for redirecting to event page
+        techContainer.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const eventType = this.getAttribute('data-event');
+                if (eventType) {
+                    window.location.href = `event.html?event=${eventType}`;
+                }
+            });
+        });
     }
 }
 
