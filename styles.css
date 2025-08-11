@@ -1999,3 +1999,158 @@ EVENT DETAILS SECTION
     font-size: 2rem;
   }
 }
+/* =================================================================
+  Register Section Styles
+  ================================================================= */
+.register-section {
+  padding: var(--space-2xl) 0;
+  background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.register-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.register-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.register-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: var(--font-size-4xl);
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-bottom: var(--space-md);
+  text-shadow: 0 0 20px var(--primary-color);
+  animation: revealText 1s ease-out;
+}
+
+.register-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.register-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-xl);
+}
+
+.register-btn-animated {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-2xl);
+  background: linear-gradient(135deg, var(--primary-color) 0%, #00b3b3 100%);
+  color: var(--dark-bg);
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.register-btn-animated:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.8);
+  background: linear-gradient(135deg, #00ffff 0%, #00e6e6 100%);
+}
+
+.register-btn-animated:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  transition: all var(--transition-normal);
+}
+
+.register-btn-animated:hover .btn-text {
+  color: var(--darker-bg);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left var(--transition-slow);
+}
+
+.register-btn-animated:hover .btn-glow {
+  left: 100%;
+}
+
+.btn-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.register-btn-animated:hover .btn-particles {
+  opacity: 1;
+  animation: pulseBreath 1.5s ease-in-out infinite;
+}
+
+/* Responsive adjustments for register section */
+@media (max-width: 768px) {
+  .register-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .register-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .register-btn-animated {
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .register-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .register-btn-animated {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-sm);
+    letter-spacing: 1px;
+  }
+}
+
