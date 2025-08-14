@@ -218,6 +218,34 @@
                 </div>
             </div>
         </section>
+        <!-- Word from Our Principal Section -->
+        <section id="principal-message" class="principal-section">
+            <div class="principal-container scroll-reveal-block">
+                <h2 class="principal-title">A Word from Our Principal</h2>
+                <div class="principal-content">
+                    <div class="principal-text-section">
+                        <div class="principal-message">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div class="principal-signature">
+                            <h3 class="principal-name">Mr. Rudrendra Basak</h3>
+                            <p class="principal-designation">Principal, Jagran Public School</p>
+                        </div>
+                    </div>
+                    <div class="principal-image-section">
+                        <div class="principal-image">
+                            <!-- Add your principal's image here -->
+                            <img src="https://github.com/Thecodlink/jps_techno_fiato/blob/main/Untitled%20design%20(1).png?raw=true" alt="Principal" class="principal-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Events & Competitions Section -->
         <section id="events" class="events-section">
@@ -226,22 +254,37 @@
                 
                 <!-- Machina Fiato - Robotics Events -->
                 <div class="event-category">
-                    <h3 class="category-title">Machina Fiato - Robotics Events</h3>
+                    <h3 class="category-title clickable" onclick="toggleCategoryInfo('machina-fiato')">
+                        Machina Fiato - Robotics Events
+                        <span class="category-toggle">▼</span>
+                    </h3>
+                    <div class="category-info" id="machina-fiato-info">
+                        <p>Machine Fiato is the beating heart of Techno Fiato's engineering challenges — where mechanical design meets control systems, and strategy merges with creativity.</p>
+                        <p>From high-speed races to combat arenas, from precision navigation to innovative solutions, Machine Fiato is the ultimate test of robotics skill and competitive spirit.</p>
+                    </div>
                     <div class="event-note" style="text-align:center;margin-bottom:1.5rem;font-family:'Orbitron',sans-serif;font-size:1.1rem;color:var(--primary-color);text-shadow:0 0 10px var(--primary-color);letter-spacing:1px;">Click on the events for more details.</div>
                     <div class="circular-gallery-container" id="robotics-gallery">
                         <!-- CircularGallery will be initialized here -->
                     </div>
                 </div>
-
                 <!-- Techélon - Technology Events -->
                 <div class="event-category">
-                    <h3 class="category-title">Techélon - Technology Events</h3>
+                    <h3 class="category-title clickable" onclick="toggleCategoryInfo('techelon')">
+                        Techélon - Technology Events
+                        <span class="category-toggle">▼</span>
+                    </h3>
+                    <div class="category-info" id="techelon-info">
+                        <p>Techélon is where innovation meets code, where creativity is sculpted in pixels, and where ideas take shape in the realm of technology.</p>
+                        <p>This category of Techno Fiato is dedicated to showcasing the best in digital artistry, software development, 3D modeling, and problem solving through code.</p>
+                        <p>Whether it's crafting lifelike 3D designs, editing cinematic videos or programming elegant solutions Techélon is the arena where digital skills are tested to their limits.</p>
+                    </div>
                     <div class="event-note" style="text-align:center;margin-bottom:1.5rem;font-family:'Orbitron',sans-serif;font-size:1.1rem;color:var(--primary-color);text-shadow:0 0 10px var(--primary-color);letter-spacing:1px;">Click on the events for more details.</div>
                     <div class="circular-gallery-container" id="tech-gallery">
                         <!-- CircularGallery will be initialized here -->
                     </div>
                 </div>
             </div>
+            
         </section>
     </main>
 
@@ -414,6 +457,20 @@
             // Placeholder for Google Form link
             alert('Registration form will be available soon!');
             // Replace with: window.open('YOUR_GOOGLE_FORM_LINK', '_blank');
+        }
+        // Category info toggle function
+        function toggleCategoryInfo(categoryId) {
+            const infoElement = document.getElementById(categoryId + '-info');
+            const toggleElement = event.target.querySelector('.category-toggle') || event.target.parentElement.querySelector('.category-toggle');
+            
+            if (infoElement.style.display === 'none' || infoElement.style.display === '') {
+                infoElement.style.display = 'block';
+                toggleElement.textContent = '▲';
+                infoElement.style.animation = 'slideDown 0.3s ease-out';
+            } else {
+                infoElement.style.display = 'none';
+                toggleElement.textContent = '▼';
+            }
         }
     </script>
 </body>
