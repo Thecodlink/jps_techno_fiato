@@ -110,6 +110,19 @@
             margin-bottom: 0.5rem;
             line-height: 1.7;
         }
+        
+        .event-section-block strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .event-section-block li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-section-block li:last-child {
+            margin-bottom: 0;
+        }
         .event-back-link {
             display: inline-block;
             margin-bottom: 2rem;
@@ -148,87 +161,142 @@
     <script>
     // Event data (copy from script.js for consistency)
     const eventData = {
-        roborush: {
-            title: "R²:RoboRash",
+        roborash: {
+            title: "Robo-Rash — Obstacle Course Challenge",
             icon: "fas fa-robot",
             accent: "cyan",
-            overview: "Control your robot through a wild obstacle course with strategic challenges. Complete the obstacle fastest to win!",
+            overview: "Robo-Rash is an adrenaline-charged obstacle course designed to push robots to their limits. Bots must navigate ramps, cones, boundaries, and bonus challenges in a race against the clock. Every second counts — precision and control are just as important as speed in this high-stakes race.",
+            participation: "Team of 2 participants + 1 bot",
+            duration: "Race against time",
+            timing: "8:45 AM",
+            venue: "Pre-Primary Amphitheater",
+            software: "N/A (Hardware Event)",
             rules: [
-                "Max 2 participants per team",
-                "Bot max size: 25cm x 25cm",
-                "Manual control (wired or wireless)",
-                "Time penalties for going off-track: +15 sec",
-                "Skipping steps: +20 sec",
-                "Touching your bot: +10 sec",
-                "Fastest completion wins"
+                "Each team will consist of two participants and one bot",
+                "The bot can be wired or wireless",
+                "Power must be supplied by batteries; no power points will be provided",
+                "The track layout will be uploaded on the official website one day prior to the event",
+                "A bonus task will be placed on the track, offering perks and bonus points",
+                "If the bot goes out of boundary, 3 seconds will be added to the total time",
+                "If cones on the ramp are touched, 3 seconds will be added to the total time",
+                "If the bot falls off or flips on the ramp, 6 seconds will be added to the total time",
+                "Participants have two chances to skip hurdles: the first skip adds 30 seconds, and the second skip adds 45 seconds to the time"
             ],
             specs: [
-                "Bot dimensions: 25cm x 25cm maximum",
-                "Power: Wired or wireless control",
-                "Control: Manual remote operation",
-                "Arena: Obstacle course with ramps and curves"
+                "Participation: Team of 2 participants + 1 bot",
+                "Duration: Race against time",
+                "Timing: 8:45 AM",
+                "Venue: Pre-Primary Amphitheater",
+                "Bot Dimensions: Maximum 25 cm × 30 cm",
+                "Power: Battery-powered only (no power points provided)",
+                "Control: Wired or wireless",
+                "Track: Layout uploaded one day prior to event",
+                "Bonus: Special tasks for extra points"
             ],
             judging: [
-                "Completion time (primary)",
-                "Number of penalties",
-                "Control precision",
-                "Strategic navigation"
+                "The winner will be the bot that completes the course in the shortest time"
             ]
         },
         gob: {
-            title: "G.O.B: Game of Bots",
+            title: "Game of Bots (G.O.B)",
             icon: "fas fa-fist-raised",
             accent: "magenta",
-            overview: "Bot vs Bot in a circular arena, gaining points through strategic hits, knockouts, and survival. A dynamic arena-style setup for intense combat action!",
+            overview: "Game of Bots is a thrilling clash of engineering skill and durability, where custom-built machines face off in a test of strength, control, and resilience. Each match is a battle of wits and endurance, with the goal of staying in the arena and outmaneuvering the opponent until the last second.",
+            participation: "Team of 2 participants + 1 bot",
+            duration: "5 minutes per match",
+            timing: "8:45 AM",
+            venue: "Assembly Ground",
+            software: "N/A (Hardware Event)",
             rules: [
-                "1v1 or Team-based bot matches",
-                "Points awarded for strategic hits",
-                "Points awarded for knockouts",
-                "Wired or wireless bots allowed",
-                "Add-ons allowed but checked by core team",
-                "Ring size: Circular combat arena",
-                "Match duration: 3 minutes per round"
+                "Each team will consist of two participants and one bot",
+                "The auxiliary features cannot contain any harmful substances that may cause permanent damage to the arena",
+                "Sharp or hazardous materials are prohibited",
+                "The bot can be wired or wireless",
+                "Power sources will be provided",
+                "All bots will be inspected before the event starts, and any bot not meeting the requirements will be disqualified",
+                "Each match will last 5 minutes; any bot that leaves the arena during this period will be disqualified",
+                "If the time runs out and bots are still in the arena, the winner will be determined by the highest hit points"
             ],
             specs: [
-                "Bot dimensions: 25cm x 25cm maximum",
-                "Weight limit: 3kg maximum",
-                "Power: Wired or wireless",
-                "Weapons: No flame or liquid-based components"
+                "Participation: Team of 2 participants + 1 bot",
+                "Duration: 5 minutes per match",
+                "Timing: 8:45 AM",
+                "Venue: Assembly Ground",
+                "Bot Weight: Must be less than 10 kg",
+                "Power: Wired or wireless (power sources provided)",
+                "Safety: No harmful substances or hazardous materials",
+                "Inspection: All bots inspected before event start"
             ],
             judging: [
-                "Total points scored",
-                "Control precision",
-                "Engineering design",
-                "Strategic gameplay"
+                "The winner is the bot that remains in the ring the longest or has the highest hit points"
             ]
         },
-        ballista: {
-            title: "BALLISTA: RoboSoccer",
-            icon: "fas fa-futbol",
-            accent: "yellow",
-            overview: "Two teams go head-to-head in a fast-paced soccer match using remote-controlled bots to push/pull a lightweight ball into the opponent's goalpost.",
+        roborumble: {
+            title: "Robo Rumble — Balloon Battle",
+            icon: "fas fa-bomb",
+            accent: "orange",
+            overview: "Robo Rumble is an action-packed balloon battle where strategy meets chaos. Two bots enter the arena, each armed with balloons, and the goal is simple — protect your own while popping your opponent's. Quick reflexes, smart defense, and clever offense will decide the ultimate survivor.",
+            participation: "Team of 2 participants + 1 robot",
+            duration: "Battle until balloon pops",
+            timing: "10:15 AM",
+            venue: "Basketball Court",
+            software: "N/A (Hardware Event)",
             rules: [
-                "Max 2 participants per team",
-                "Arena has fixed goalposts and smooth boundary",
-                "Ball size and weight specified on match day",
-                "Only remote-controlled bots allowed",
-                "No weapons, flame, or liquid-based components",
-                "Match duration: 4 minutes per game (2 mins per half)",
-                "No intentional ramming/damaging opponent's bot",
-                "Teams must remain behind control zone line",
-                "Scoring: 1 point per goal, knockout format"
+                "Each team must consist of one robot and two participants",
+                "Pointed objects, such as nails, are allowed",
+                "Sharp-edged weapons, such as knives, or any lethal attachments are strictly prohibited",
+                "Balloons must be attached to the side of the bot (exact placement is the participant's choice)",
+                "Tape and balloons will be provided by the organisers",
+                "Power ports will be available",
+                "Bots can be wired or wireless"
             ],
             specs: [
-                "Bot dimensions: 25cm x 25cm maximum",
-                "Weight limit: 3kg maximum",
-                "Power: Wired (through battery) or wireless (RC module)",
-                "Control: Remote operation only"
+                "Participation: Team of 2 participants + 1 robot",
+                "Duration: Battle until balloon pops",
+                "Timing: 10:15 AM",
+                "Venue: Basketball Court",
+                "Bot Dimensions: Maximum 25 cm × 30 cm",
+                "Weapons: Pointed objects allowed, sharp-edged weapons prohibited",
+                "Balloons: Provided by organisers, attached to bot sides",
+                "Power: Wired or wireless (power ports available)",
+                "Materials: Tape and balloons provided"
             ],
             judging: [
-                "Goals scored",
-                "Team coordination",
-                "Bot maneuverability",
-                "Strategic gameplay"
+                "The team whose balloon lasts the longest without bursting will be declared the winner"
+            ]
+        },
+        
+        ballista: {
+            title: "Ballista — Robotic Football",
+            icon: "fas fa-futbol",
+            accent: "yellow",
+            overview: "Ballista is a high-energy robotics challenge inspired by robotic football. Teams design and control bots to outscore their opponents in a fast-paced match that demands both precision engineering and strategic gameplay. It's not just about speed — accuracy, control, and teamwork will decide the champions.",
+            participation: "Team of 2 participants + 1 robot",
+            duration: "Two halves of 3 minutes each + 2-minute halftime",
+            timing: "11:45 AM",
+            venue: "Library, 1st Floor",
+            software: "N/A (Hardware Event)",
+            rules: [
+                "Each team must have one robot and two participants",
+                "Matches will consist of two halves of three minutes each, with a two-minute halftime",
+                "Intentional ramming will result in a penalty, and the opposing team will be awarded a free hit",
+                "Power ports will not be provided; bots must be battery-powered",
+                "Arena size and additional match details will be announced one day prior to the event on the official website and Instagram",
+                "If wired, the wire handler may move around the arena, but the controller must remain in a fixed position"
+            ],
+            specs: [
+                "Participation: Team of 2 participants + 1 robot",
+                "Duration: Two halves of 3 minutes each + 2-minute halftime",
+                "Timing: 11:45 AM",
+                "Venue: Library, 1st Floor",
+                "Bot Dimensions: Maximum 25 cm × 30 cm",
+                "Power: Battery-powered only (no power ports provided)",
+                "Control: Wired or wireless",
+                "Wire Length: If wired, minimum 3 m and maximum 4 m",
+                "Arena: Details announced one day prior to event"
+            ],
+            judging: [
+                "The team scoring the most goals within the match time will be declared the winner"
             ]
         },
         labyrinx: {
@@ -258,84 +326,142 @@
             ]
         },
         luxlinea: {
-            title: "LuxLinea: Path Bot Race",
+            title: "Lux Linea — Line Following Race",
             icon: "fas fa-road",
             accent: "blue",
-            overview: "An autonomous Arduino bot must follow a black path on a white surface and complete the course as fast as possible. Pure autonomous navigation challenge!",
+            overview: "Lux Linea is a thrilling race of precision, where bots follow a winding black track under intense time pressure. With strategic checkpoints and head-to-head starts from opposite ends, every millimeter counts. The challenge demands not just speed, but flawless line-following accuracy to claim victory.",
+            participation: "Team of 2 participants + 1 robot",
+            duration: "5-minute timer",
+            timing: "10:45 AM",
+            venue: "Pre-Primary Activity Hall",
+            software: "N/A (Hardware Event)",
             rules: [
-                "Max 2 participants per team",
-                "Bot must be Arduino-based",
-                "Only IR/reflective sensors allowed for path detection",
-                "Path may include curves, 90° turns, T-junctions, and mild inclines",
-                "Off-track = Time penalty or disqualification (after 3 attempts)",
-                "Time limit: 3 minutes per bot",
-                "Fastest and most accurate bot wins"
+                "Each team must consist of two participants and one robot",
+                "The width of the black line on the track will be 3 cm",
+                "Green checkpoints will be placed along the track; if a bot deviates from the path, it must restart from the nearest checkpoint behind it",
+                "Two robots will start from opposite ends of the track; the first to reach the finish line wins",
+                "The map will be uploaded on the official website one day prior to the event",
+                "A 5-minute timer will be set; if no bot reaches the finish line within the time limit, the bot farthest along the track will be declared the winner"
             ],
             specs: [
-                "Bot dimensions: 20cm x 20cm maximum",
-                "No human control after start",
-                "On-board power only",
-                "Sensors: IR/reflective sensors only"
+                "Participation: Team of 2 participants + 1 robot",
+                "Duration: 5-minute timer",
+                "Timing: 10:45 AM",
+                "Venue: Pre-Primary Activity Hall",
+                "Bot Dimensions: Maximum 25 cm × 30 cm",
+                "Track: Black line width of 3 cm",
+                "Checkpoints: Green checkpoints for restart points",
+                "Start: Two robots start from opposite ends",
+                "Map: Uploaded one day prior to event",
+                "Timer: 5-minute limit"
             ],
             judging: [
-                "Completion time",
-                "Path following accuracy",
-                "Speed optimization",
-                "Autonomous performance"
+                "The bot that reaches the finish line first wins the round"
+            ]
+        },
+        
+        craftekon: {
+            title: "Craftékon — Tinkerthon",
+            icon: "fas fa-microchip",
+            accent: "green",
+            overview: "Participants will design and simulate an innovative working circuit using TinkerCAD. The challenge is to create a practical, real-world solution — such as an automatic streetlight, a smart irrigation system, or a safety device — and explain its working clearly.",
+            participation: "Individual (Classes 9–12)",
+            duration: "1.5 hours",
+            timing: "10:15 AM",
+            venue: "Computer Lab (with internet monitored for TinkerCAD use)",
+            software: "TinkerCAD",
+            rules: [
+                "Only TinkerCAD may be used; no other software or coding platforms allowed",
+                "Problem statement will be given on the spot",
+                "Circuit must be logically sound, innovative, and clearly wired",
+                "Internet use is restricted to TinkerCAD's official interface only",
+                "Shortlisted circuits will be presented to judges in a live Q&A session"
+            ],
+            specs: [
+                "Participation: Individual (Classes 9–12)",
+                "Duration: 1.5 hours",
+                "Timing: 10:15 AM",
+                "Venue: Computer Lab (with internet monitored for TinkerCAD use)",
+                "Software: TinkerCAD only",
+                "Problem: Statement given on the spot",
+                "Requirements: Logically sound, innovative, clearly wired circuit",
+                "Output: Circuit design and live Q&A presentation"
+            ],
+            judging: [
+                "Circuit Logic & Accuracy",
+                "Innovation & Creativity",
+                "Wiring Neatness",
+                "Explanation & Presentation Skills"
             ]
         },
         technova: {
-            title: "TechNova: Innovation Challenge",
+            title: "TechNova — Innovation Challenge",
             icon: "fas fa-lightbulb",
             accent: "orange",
-            overview: "Teams will present a working model using sensors and Arduino or basic robotics kits aimed at solving daily-life problems. Innovation meets practicality!",
+            overview: "Teams will present a fully functional software or hardware-based solution aimed at solving a real-world problem. The model must perform its intended functions without major human intervention, reflecting the reliability of market-ready products.",
+            participation: "Team of 3 members",
+            duration: "Event duration",
+            timing: "Event timing",
+            venue: "Activity Hall (First Floor)",
+            software: "Software or hardware-based solutions",
             rules: [
-                "Max 3 members per team",
-                "Pre-built models must be presented at venue",
-                "5 minutes for demo + 2 minutes Q&A by judges",
-                "Models must use at least 1 sensor (IR, ultrasonic, temperature, etc.)",
-                "Models must be working (functional demo required)",
-                "Bonus awarded for sustainable or eco-friendly projects"
+                "The solution must be functional and operate reliably without constant external control",
+                "Previously exhibited models are not permitted",
+                "Hardware projects using sensors must justify their inclusion with a clear explanation of necessity and function",
+                "Teams must submit comprehensive documentation detailing the working, design, and functionality of their project",
+                "Last-minute team member substitutions are not allowed",
+                "Use of commercially available, pre-assembled, plug-and-play kits will lead to disqualification",
+                "External help within the school premises is prohibited"
             ],
             specs: [
-                "Hardware: Arduino or basic robotics kits",
-                "Sensors: Minimum 1 sensor required",
-                "Power: Self-contained power source",
-                "Size: Portable and demo-friendly"
+                "Participation: Team of 3 members",
+                "Venue: Activity Hall (First Floor)",
+                "Solution Type: Software or hardware-based",
+                "Functionality: Must operate without major human intervention",
+                "Documentation: Comprehensive working, design, and functionality details required",
+                "Innovation: Must solve real-world problems",
+                "Reliability: Market-ready product standards"
             ],
             judging: [
-                "Innovation and creativity",
-                "Practicality and real-world application",
-                "Technical implementation",
-                "Presentation quality",
-                "Bonus: Sustainability factor"
+                "Innovation",
+                "Practicality & Ease of Implementation",
+                "Design & Ergonomics",
+                "Scale of the Problem Solved",
+                "Presentation Skills"
             ]
         },
-        modelus: {
-            title: "Modelus Virtuo: 3D Modeling Showdown",
+        modulusvirtuo: {
+            title: "Modulus Virtuo — 3D Modeling",
             icon: "fas fa-cube",
             accent: "purple",
-            overview: "Participants will use Blender to create a detailed 3D model based on a theme disclosed at the start of the event. This could be a product design, architectural model, character, or futuristic object.",
+            overview: "Participants will receive a hard copy of an image in digital format and must recreate it in 3D using only the provided software. The challenge lies in precision, attention to detail, and effective use of 3D modeling tools.",
+            participation: "Individual (Classes 9–12)",
+            duration: "1 hour",
+            timing: "08:45 AM",
+            venue: "Computer Lab 1",
+            software: "Blender (v4.3)",
             rules: [
-                "Solo or Teams of 2 (Grades 9-12)",
-                "Only Blender software allowed (pre-installed in school labs)",
-                "Time limit: 2.5 hours",
-                "No external asset imports or textures",
-                "Internet usage strictly prohibited",
-                "All renders must be original and made during the event"
+                "The model must be an original recreation of the given image — no external assets or imports allowed",
+                "Only the provided software may be used; no internet access will be given",
+                "Participants must save and submit their work before the end of the allotted time",
+                "Mesh topology, cleanliness, and accuracy will be taken into account",
+                "No pre-made textures, lighting presets, or plug-ins are permitted"
             ],
             specs: [
-                "Software: Blender only",
-                "Hardware: School computer lab equipment",
-                "Theme: Disclosed at event start",
-                "Output: Rendered images and 3D model file"
+                "Participation: Individual (Classes 9–12)",
+                "Duration: 1 hour",
+                "Timing: 08:45 AM",
+                "Venue: Computer Lab 1",
+                "Software: Blender (v4.3)",
+                "Reference: Hard copy image provided at start",
+                "Output: 3D model file (.blend) and renders"
             ],
             judging: [
-                "Complexity and detailing",
-                "Creativity and relevance to theme",
-                "Lighting and rendering techniques",
-                "Mesh cleanliness and topology",
-                "Realism or stylization as per theme"
+                "Accuracy & Similarity to the given reference image",
+                "Use of 3D Modeling Tools",
+                "Complexity & Detailing",
+                "Lighting Quality",
+                "Overall Presentation"
             ]
         },
         cineframe: {
@@ -390,28 +516,105 @@
             ]
         },
         pixelpetra: {
-            title: "Pixel Petra: MS Paint Design Sprint",
+            title: "Pixel Petra — Digital Art Challenge",
             icon: "fas fa-palette",
             accent: "lime",
-            overview: "Participants will use MS Paint to create art on a given theme (e.g., 'Future Tech,' 'Space City,' 'Eco World') in a limited time. Pure creativity challenge!",
+            overview: "Participants will create digital artwork in Microsoft Paint based on a surprise topic revealed at the start of the event. With only basic tools at their disposal, participants must rely on pure creativity and resourcefulness to impress the judges.",
+            participation: "Individual (Classes 6–8)",
+            duration: "1 hour",
+            timing: "08:45 AM",
+            venue: "Computer Lab 2",
+            software: "Microsoft Paint (pre-installed in the school's computer lab)",
             rules: [
-                "Solo event (Grades 6-8)",
-                "Software: Microsoft Paint only",
-                "Time limit: 1 hour",
-                "No internet or references allowed",
-                "Theme announced just before the event"
+                "The topic will be announced right before the event begins",
+                "No internet access or external references allowed",
+                "Only MS Paint and its native tools can be used — no imports",
+                "Participants must save and submit their final artwork within the given time"
             ],
             specs: [
-                "Software: Microsoft Paint",
-                "Hardware: School computer lab",
-                "Theme: Disclosed at event start",
-                "Output: Digital artwork file"
+                "Participation: Individual (Classes 6–8)",
+                "Duration: 1 hour",
+                "Timing: 08:45 AM",
+                "Venue: Computer Lab 2",
+                "Software: Microsoft Paint (pre-installed)",
+                "Topic: Surprise theme revealed at event start",
+                "Output: Digital artwork file (.png/.jpg)"
             ],
             judging: [
-                "Creativity and imagination",
-                "Use of MS Paint tools",
-                "Relevance to theme",
-                "Coloring and line work"
+                "Creativity & Imagination",
+                "Use of MS Paint Tools",
+                "Relevance to the Theme",
+                "Coloring & Line Work"
+            ]
+        },
+        
+        bytecoder: {
+            title: "Bytecoder — Programming Challenge",
+            icon: "fas fa-code",
+            accent: "blue",
+            overview: "Participants will be given one or two programming problems to solve within the allotted time. The goal is to write efficient, well-structured code that produces the required output. This event tests logic, optimization, and speed under pressure.",
+            participation: "Individual (Classes 9–12)",
+            duration: "1 hour",
+            timing: "10:15 AM",
+            venue: "Computer Lab 1",
+            software: "BlueJ, Python 3.x",
+            rules: [
+                "Participants must work individually — no collaboration allowed",
+                "Code must be written from scratch during the event; no copy-pasting from prior work",
+                "Internet access is strictly prohibited",
+                "Solutions must be submitted as per the file format specified by the coordinators",
+                "Participants may be asked to explain their logic to the judges"
+            ],
+            specs: [
+                "Participation: Individual (Classes 9–12)",
+                "Duration: 1 hour",
+                "Timing: 10:15 AM",
+                "Venue: Computer Lab 1",
+                "Software: BlueJ, Python 3.x",
+                "Problems: 1-2 programming challenges",
+                "Output: Source code files as specified by coordinators"
+            ],
+            judging: [
+                "Time Taken to complete the problem(s)",
+                "Program Organization & Logic Flow",
+                "Code Efficiency (shorter, optimized code preferred)",
+                "Correctness of Output"
+            ]
+        },
+        
+        editra: {
+            title: "Editra — Video Editing & Filmmaking",
+            icon: "fas fa-video",
+            accent: "red",
+            overview: "Teams will shoot and edit a short film based on a theme revealed at the start of the event. The final video must include dialogues, transitions, sound design, and be created entirely using the provided resources. This is a test of cinematic vision, technical skill, and storytelling ability.",
+            participation: "Team of 2 (Classes 9–12)",
+            duration: "2 hours for shooting, 1 hour for editing",
+            timing: "11:45 PM for editing",
+            venue: "Computer Lab 1 (for editing), Entire school premises (for shooting)",
+            software: "Adobe Premiere Pro, Wondershare Filmora, Capcut, Adobe Photoshop",
+            rules: [
+                "Internet access is not allowed",
+                "No external presets, templates, or stock footage may be used",
+                "Only inbuilt effects, music, and transitions are permitted",
+                "A resource folder containing presets, SFX, and stock overlays will be provided",
+                "The final video must be rendered and submitted within the time limit",
+                "Teams are responsible for ensuring clear audio and stable visuals in their clips"
+            ],
+            specs: [
+                "Participation: Team of 2 (Classes 9–12)",
+                "Duration: 2 hours for shooting, 1 hour for editing",
+                "Timing: 11:45 PM for editing",
+                "Venue: Computer Lab 1 (for editing), Entire school premises (for shooting)",
+                "Software: Adobe Premiere Pro, Wondershare Filmora, Capcut, Adobe Photoshop",
+                "Resources: Presets, SFX, and stock overlays provided",
+                "Output: Final rendered video file"
+            ],
+            judging: [
+                "Creativity in concept and execution",
+                "Cinematic Techniques — camera work, framing, transitions",
+                "Editing Skills — pacing, cuts, effects, color grading",
+                "Sound & Music Integration",
+                "Overall Storytelling Impact"
             ]
         }
     };
@@ -460,6 +663,18 @@
                 <h3>Overview</h3>
                 <p>${event.overview}</p>
             </div>
+            ${event.participation ? `
+            <div class="event-section-block">
+                <h3>Event Details</h3>
+                <ul>
+                    <li><strong>Participation:</strong> ${event.participation}</li>
+                    <li><strong>Duration:</strong> ${event.duration}</li>
+                    <li><strong>Timing:</strong> ${event.timing}</li>
+                    <li><strong>Venue:</strong> ${event.venue}</li>
+                    <li><strong>Software:</strong> ${event.software}</li>
+                </ul>
+            </div>
+            ` : ''}
             <div class="event-section-block">
                 <h3>Rules</h3>
                 <ul>${event.rules.map(rule => `<li>${rule}</li>`).join('')}</ul>
