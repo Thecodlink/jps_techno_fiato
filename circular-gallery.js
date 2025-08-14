@@ -48,13 +48,13 @@ function initCircularGalleries() {
     const roboticsContainer = document.getElementById('robotics-gallery');
     if (roboticsContainer) {
         const roboticsItems = [
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg?raw=true', text: "Robo Rumble", eventType: "roborumble" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/upscalemedia-transformed%20(5).jpeg?raw=true', text: "Robo Rumble", eventType: "roborumble" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/WhatsApp%20Image%202025-08-04%20at%2020.03.31.jpeg?raw=true', text: "Game of Bots", eventType: "gob" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/rl-terms-1200x800-1.jpg?raw=true', text: "Ballista", eventType: "ballista" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/aisle-1850106_1920.jpg?raw=true', text: "Craftekon", eventType: "craftekon" },
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/cyber-2377718_1920.jpg?raw=true', text: "Craftekon", eventType: "craftekon" },
             { image: 'https://raw.githubusercontent.com/Thecodlink/jps_techno_fiato/refs/heads/main/line-follwer-1.webp', text: "Lux Linea", eventType: "luxlinea" },
             { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/innovation-2901928_1920.jpg?raw=true', text: "TechNova", eventType: "technova" },
-            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/cyber-2377718_1920.jpg?raw=true', text: "Robo-Rash", eventType: "roborash" }
+            { image: 'https://github.com/Thecodlink/jps_techno_fiato/blob/main/r2.jpeg?raw=true', text: "Robo-Rash", eventType: "roborash" }
         ];
         
         // Simple gallery for now - will enhance later
