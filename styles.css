@@ -2626,4 +2626,59 @@ EVENT DETAILS SECTION
     margin: var(--space-sm) 0;
   }
 }
+/* Keep particles behind everything */
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Fixed top bar */
+.event-topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;                /* header height (desktop) */
+  display: flex;
+  align-items: center;
+  padding: 0 .75rem;
+  background: rgba(10,10,10,0.65);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;               /* above everything */
+}
+
+/* Back button styling */
+.event-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+  padding: .5rem .8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,0,255,0.35);
+  background: rgba(255,0,255,0.08);
+  box-shadow: 0 0 20px rgba(255,0,255,0.35);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Page content spacing: push content below the fixed header */
+.event-main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 1rem 2rem;    /* top padding > header height */
+}
+
+/* Normal spacing for the card */
+.event-card-minimal {
+  margin-bottom: 2rem !important; /* !important in case an inline margin sneaks back */
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .event-topbar { height: 48px; padding: 0 .5rem; }
+  .event-main-container { padding-top: 64px; }
+  .event-back-btn { font-size: .95rem; padding: .4rem .7rem; }
+}
 
