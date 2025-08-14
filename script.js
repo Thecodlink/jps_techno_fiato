@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Background themes for each event - minimal changes
 const backgroundThemes = {
     hero: 'var(--bg-theme-1)',
-    roborush: 'var(--bg-theme-1)',
+    roborash: 'var(--bg-theme-1)',
     gob: 'var(--bg-theme-1)',
     ballista: 'var(--bg-theme-1)',
     labyrinx: 'var(--bg-theme-1)',
@@ -20,7 +20,7 @@ const backgroundThemes = {
 // Event titles for sticky header
 const eventTitles = {
     hero: 'Welcome to TECHNO FIATO',
-    roborush: 'R³: RoboRush',
+    roborash: 'Robo-Rash: Obstacle Course Challenge',
     gob: 'G.O.B: Game of Bots',
     ballista: 'BALLISTA: RoboSoccer',
     labyrinx: 'Labyrinx: Bot Maze',
@@ -35,7 +35,7 @@ const eventTitles = {
 
 // Neon glow colors for dynamic effects
 const neonColors = {
-    roborush: 'var(--neon-cyan)',
+    roborash: 'var(--neon-cyan)',
     gob: 'var(--neon-magenta)',
     ballista: 'var(--neon-yellow)',
     labyrinx: 'var(--neon-green)',
@@ -403,30 +403,34 @@ function initParticles() {
 
 // Event Data for Modals
 const eventData = {
-    roborush: {
-        title: "R³: RoboRush",
+    roborash: {
+        title: "Robo-Rash — Obstacle Course Challenge",
         icon: "fas fa-robot",
-        overview: "Control your robot through a wild obstacle course with strategic challenges. Complete the obstacle fastest to win!",
+        overview: "Robo-Rash is an adrenaline-charged obstacle course designed to push robots to their limits. Bots must navigate ramps, cones, boundaries, and bonus challenges in a race against the clock. Every second counts — precision and control are just as important as speed in this high-stakes race.",
         rules: [
-            "Max 2 participants per team",
-            "Bot max size: 25cm x 25cm",
-            "Manual control (wired or wireless)",
-            "Time penalties for going off-track: +15 sec",
-            "Skipping steps: +20 sec",
-            "Touching your bot: +10 sec",
-            "Fastest completion wins"
+            "Each team will consist of two participants and one bot",
+            "The bot can be wired or wireless",
+            "Power must be supplied by batteries; no power points will be provided",
+            "The track layout will be uploaded on the official website one day prior to the event",
+            "A bonus task will be placed on the track, offering perks and bonus points",
+            "If the bot goes out of boundary, 3 seconds will be added to the total time",
+            "If cones on the ramp are touched, 3 seconds will be added to the total time",
+            "If the bot falls off or flips on the ramp, 6 seconds will be added to the total time",
+            "Participants have two chances to skip hurdles: the first skip adds 30 seconds, and the second skip adds 45 seconds to the time"
         ],
         specs: [
-            "Bot dimensions: 25cm x 25cm maximum",
-            "Power: Wired or wireless control",
-            "Control: Manual remote operation",
-            "Arena: Obstacle course with ramps and curves"
+            "Participation: Team of 2 participants + 1 bot",
+            "Duration: Race against time",
+            "Timing: 8:45 AM",
+            "Venue: Pre-Primary Amphitheater",
+            "Bot Dimensions: Maximum 25 cm × 30 cm",
+            "Power: Battery-powered only (no power points provided)",
+            "Control: Wired or wireless",
+            "Track: Layout uploaded one day prior to event",
+            "Bonus: Special tasks for extra points"
         ],
         judging: [
-            "Completion time (primary)",
-            "Number of penalties",
-            "Control precision",
-            "Strategic navigation"
+            "The winner will be the bot that completes the course in the shortest time"
         ]
     },
     gob: {
@@ -660,7 +664,6 @@ const eventData = {
         ]
     }
 };
-
 //light modal
 const light = document.getElementById("light");
 
