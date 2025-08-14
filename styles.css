@@ -627,8 +627,12 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap; /* allow wrapping on mobile */
+  background: rgba(10, 10, 10, 0.95); /* match sticky-header background */
+  backdrop-filter: blur(20px);
+  width: 100%;
+  padding: 0.5rem 1rem; /* space for mobile */
 }
-
 .nav-menu {
   display: flex;
   gap: 1.5rem;
