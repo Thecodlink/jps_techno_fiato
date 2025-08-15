@@ -645,9 +645,9 @@ body {
   font-weight: 500;
   transition: all var(--transition-normal);
   position: relative;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem; /* Smaller padding */
   border-radius: 25px;
-  font-size: var(--font-size-sm);
+  font-size: 0.8rem; /* Smaller font size */
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid transparent;
   backdrop-filter: blur(10px);
