@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno Fiato — First Edition Endnote</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-start: #0f0f0f;
+            --bg-end: #1a1a1a;
+            --text: #ffffff;
+            --muted: rgba(255,255,255,0.72);
+            --accent-a: #47D1FF;
+            --accent-b: #C4FF47;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+            color: var(--text);
+            font-family: "Poppins", "Figtree", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .center-wrap {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .stack {
+            text-align: center;
+            max-width: 880px;
+            width: 100%;
+        }
+        .title {
+            font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+            font-size: clamp(30px, 5vw, 56px);
+            font-weight: 600;
+            letter-spacing: 0.25px;
+            line-height: 1.14;
+            margin: 0 0 16px 0;
+            opacity: 0;
+            background: linear-gradient(92deg, var(--text) 0%, var(--text) 55%, rgba(255,255,255,0.92) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(71,209,255,0.06), 0 0 36px rgba(196,255,71,0.04);
+            animation: fadeUp 900ms ease forwards;
+        }
+        .subtitle {
+            font-family: "Inter", "Figtree", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+            font-size: clamp(16px, 2.1vw, 19px);
+            font-weight: 400;
+            color: var(--muted);
+            letter-spacing: 0.2px;
+            line-height: 1.65;
+            margin: 0 auto 30px auto;
+            max-width: 760px;
+            opacity: 0;
+            animation: fadeUp 900ms ease 180ms forwards;
+        }
+        .hero-image {
+            width: min(700px, 92vw);
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 14px;
+            box-shadow: 0 14px 46px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05) inset;
+            border: 1px solid rgba(255,255,255,0.06);
+            opacity: 0;
+            transform: translateY(10px) scale(0.995);
+            backface-visibility: hidden;
+            will-change: transform, opacity, filter;
+            animation: fadeUp 900ms ease 320ms forwards;
+        }
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(12px) scale(0.995); filter: blur(2px); }
+            60% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0.3px); }
+            100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        }
+        /* Subtle ambient vignette + gentle hue */
+        .vignette {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(1200px 600px at 50% 28%, rgba(71,209,255,0.08), transparent 60%),
+                radial-gradient(900px 500px at 50% 82%, rgba(196,255,71,0.06), transparent 62%),
+                radial-gradient(1600px 1000px at 50% 50%, rgba(0,0,0,0.35), transparent 60%);
+            mix-blend-mode: screen;
+            animation: breathe 7s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.9; }
+            50% { opacity: 1; }
+        }
+        }
+    </style>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div class="center-wrap">
+        <div class="stack" role="main" aria-label="Endnote">
+            <h1 class="title">Techno Fiato — First Edition has now ended</h1>
+            <p class="subtitle">Thank you to all participants, volunteers, judges, sponsors, and everyone who made this vision possible.</p>
+            <img class="hero-image" src="/assets/techno-fiato-thankyou.png" alt="Thank you from Techno Fiato" loading="eager" />
+        </div>
+    </div>
+    <div class="vignette"></div>
+</body>
+</html>
+
